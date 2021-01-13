@@ -1,0 +1,3 @@
+/home/paulina/Pulpit/inzynierka/CMakeFiles/rebuild_cache.dir
+/home/paulina/Pulpit/inzynierka/CMakeFiles/edit_cache.dir
+/home/paulina/Pulpit/inzynierka/CMakeFiles/TestOpenCV.dir

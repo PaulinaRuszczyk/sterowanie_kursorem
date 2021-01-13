@@ -1,0 +1,360 @@
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/paulina/Pulpit/inzynierka/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_d29da/fast && /usr/bin/make -f CMakeFiles/cmTC_d29da.dir/build.make CMakeFiles/cmTC_d29da.dir/build
+make[1]: Entering directory '/home/paulina/Pulpit/inzynierka/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d29da.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_d29da.dir/src.c.o   -c /home/paulina/Pulpit/inzynierka/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_d29da
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d29da.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_d29da.dir/src.c.o  -o cmTC_d29da 
+/usr/bin/ld: CMakeFiles/cmTC_d29da.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_d29da.dir/build.make:87: cmTC_d29da] Error 1
+make[1]: Leaving directory '/home/paulina/Pulpit/inzynierka/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_d29da/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/paulina/Pulpit/inzynierka/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_1113b/fast && /usr/bin/make -f CMakeFiles/cmTC_1113b.dir/build.make CMakeFiles/cmTC_1113b.dir/build
+make[1]: Entering directory '/home/paulina/Pulpit/inzynierka/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1113b.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_1113b.dir/src.c.o   -c /home/paulina/Pulpit/inzynierka/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_1113b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1113b.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_1113b.dir/src.c.o  -o cmTC_1113b 
+/usr/bin/ld: CMakeFiles/cmTC_1113b.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_1113b.dir/build.make:87: cmTC_1113b] Error 1
+make[1]: Leaving directory '/home/paulina/Pulpit/inzynierka/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_1113b/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/paulina/Pulpit/inzynierka/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_a3664/fast && /usr/bin/make -f CMakeFiles/cmTC_a3664.dir/build.make CMakeFiles/cmTC_a3664.dir/build
+make[1]: Entering directory '/home/paulina/Pulpit/inzynierka/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a3664.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_a3664.dir/src.c.o   -c /home/paulina/Pulpit/inzynierka/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_a3664
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a3664.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_a3664.dir/src.c.o  -o cmTC_a3664 
+/usr/bin/ld: CMakeFiles/cmTC_a3664.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_a3664.dir/build.make:87: cmTC_a3664] Error 1
+make[1]: Leaving directory '/home/paulina/Pulpit/inzynierka/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_a3664/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/paulina/Pulpit/inzynierka/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_e6053/fast && /usr/bin/make -f CMakeFiles/cmTC_e6053.dir/build.make CMakeFiles/cmTC_e6053.dir/build
+make[1]: Entering directory '/home/paulina/Pulpit/inzynierka/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e6053.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_e6053.dir/src.c.o   -c /home/paulina/Pulpit/inzynierka/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_e6053
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e6053.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_e6053.dir/src.c.o  -o cmTC_e6053 
+/usr/bin/ld: CMakeFiles/cmTC_e6053.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_e6053.dir/build.make:87: cmTC_e6053] Error 1
+make[1]: Leaving directory '/home/paulina/Pulpit/inzynierka/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_e6053/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/paulina/Pulpit/inzynierka/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_9763a/fast && /usr/bin/make -f CMakeFiles/cmTC_9763a.dir/build.make CMakeFiles/cmTC_9763a.dir/build
+make[1]: Entering directory '/home/paulina/Pulpit/inzynierka/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9763a.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_9763a.dir/src.c.o   -c /home/paulina/Pulpit/inzynierka/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_9763a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9763a.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_9763a.dir/src.c.o  -o cmTC_9763a 
+/usr/bin/ld: CMakeFiles/cmTC_9763a.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_9763a.dir/build.make:87: cmTC_9763a] Error 1
+make[1]: Leaving directory '/home/paulina/Pulpit/inzynierka/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_9763a/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/paulina/Pulpit/inzynierka/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_f6499/fast && /usr/bin/make -f CMakeFiles/cmTC_f6499.dir/build.make CMakeFiles/cmTC_f6499.dir/build
+make[1]: Entering directory '/home/paulina/Pulpit/inzynierka/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f6499.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_f6499.dir/src.c.o   -c /home/paulina/Pulpit/inzynierka/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_f6499
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f6499.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_f6499.dir/src.c.o  -o cmTC_f6499 
+/usr/bin/ld: CMakeFiles/cmTC_f6499.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_f6499.dir/build.make:87: cmTC_f6499] Error 1
+make[1]: Leaving directory '/home/paulina/Pulpit/inzynierka/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_f6499/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/paulina/Pulpit/inzynierka/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_3a382/fast && /usr/bin/make -f CMakeFiles/cmTC_3a382.dir/build.make CMakeFiles/cmTC_3a382.dir/build
+make[1]: Entering directory '/home/paulina/Pulpit/inzynierka/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3a382.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_3a382.dir/src.c.o   -c /home/paulina/Pulpit/inzynierka/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_3a382
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3a382.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_3a382.dir/src.c.o  -o cmTC_3a382 
+/usr/bin/ld: CMakeFiles/cmTC_3a382.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_3a382.dir/build.make:87: cmTC_3a382] Error 1
+make[1]: Leaving directory '/home/paulina/Pulpit/inzynierka/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_3a382/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/paulina/Pulpit/inzynierka/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_c287d/fast && /usr/bin/make -f CMakeFiles/cmTC_c287d.dir/build.make CMakeFiles/cmTC_c287d.dir/build
+make[1]: Entering directory '/home/paulina/Pulpit/inzynierka/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c287d.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_c287d.dir/src.c.o   -c /home/paulina/Pulpit/inzynierka/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_c287d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c287d.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_c287d.dir/src.c.o  -o cmTC_c287d 
+/usr/bin/ld: CMakeFiles/cmTC_c287d.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_c287d.dir/build.make:87: cmTC_c287d] Error 1
+make[1]: Leaving directory '/home/paulina/Pulpit/inzynierka/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_c287d/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/paulina/Pulpit/inzynierka/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_b757d/fast && /usr/bin/make -f CMakeFiles/cmTC_b757d.dir/build.make CMakeFiles/cmTC_b757d.dir/build
+make[1]: Entering directory '/home/paulina/Pulpit/inzynierka/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b757d.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_b757d.dir/src.c.o   -c /home/paulina/Pulpit/inzynierka/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_b757d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b757d.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_b757d.dir/src.c.o  -o cmTC_b757d 
+/usr/bin/ld: CMakeFiles/cmTC_b757d.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_b757d.dir/build.make:87: cmTC_b757d] Error 1
+make[1]: Leaving directory '/home/paulina/Pulpit/inzynierka/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_b757d/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
