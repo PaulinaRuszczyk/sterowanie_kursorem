@@ -233,6 +233,12 @@ OpenCV_DIR:PATH=/usr/local/lib/cmake/opencv4
 //pkg-config executable
 PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/bin/pkg-config
 
+//The directory containing a CMake configuration file for SFML.
+SFML_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/SFML
+
+//Path to a file.
+SFML_DOC_DIR:PATH=SFML_DOC_DIR-NOTFOUND
+
 //Value Computed by CMake
 TestOpenCV_BINARY_DIR:STATIC=/home/paulina/Pulpit/inzynierka
 
@@ -424,6 +430,9 @@ pkgcfg_lib_PKG_FONTCONFIG_fontconfig:FILEPATH=/usr/lib/x86_64-linux-gnu/libfontc
 
 //Path to a library.
 pkgcfg_lib_PKG_FONTCONFIG_freetype:FILEPATH=/usr/lib/x86_64-linux-gnu/libfreetype.so
+
+//The directory containing a CMake configuration file for portaudio.
+portaudio_DIR:PATH=portaudio_DIR-NOTFOUND
 
 
 ########################

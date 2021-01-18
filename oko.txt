@@ -1,0 +1,738 @@
+x 422 y 332
+przef x 281 przef y 221
+x 332 y 324
+przef x 221 przef y 216
+x 334 y 306
+przef x 333 przef y 311
+x 422 y 310
+przef x 422 przef y 317
+x 336 y 304
+przef x 376 przef y 345
+x 424 y 310
+przef x 475 przef y 351
+x 336 y 304
+przef x 390 przef y 354
+x 338 y 310
+przef x 394 przef y 358
+x 338 y 308
+przef x 393 przef y 357
+x 426 y 314
+przef x 493 przef y 363
+x 428 y 312
+przef x 498 przef y 364
+x 338 y 308
+przef x 391 przef y 354
+x 338 y 306
+przef x 388 przef y 351
+x 430 y 310
+przef x 499 przef y 361
+x 340 y 306
+przef x 385 przef y 347
+x 340 y 306
+przef x 383 przef y 344
+x 430 y 312
+przef x 496 przef y 359
+x 340 y 306
+przef x 380 przef y 341
+x 430 y 312
+przef x 493 przef y 356
+x 342 y 306
+przef x 377 przef y 338
+x 340 y 304
+przef x 375 przef y 335
+x 432 y 310
+przef x 490 przef y 352
+x 342 y 306
+przef x 372 przef y 332
+x 340 y 306
+przef x 369 przef y 329
+x 338 y 306
+przef x 366 przef y 327
+x 428 y 312
+przef x 485 przef y 349
+x 340 y 306
+przef x 363 przef y 325
+x 428 y 310
+przef x 481 przef y 346
+x 340 y 306
+przef x 361 przef y 322
+x 430 y 312
+przef x 477 przef y 343
+x 340 y 306
+przef x 358 przef y 320
+x 428 y 310
+przef x 473 przef y 340
+x 340 y 306
+przef x 356 przef y 318
+x 428 y 310
+przef x 469 przef y 337
+x 340 y 306
+przef x 353 przef y 316
+x 340 y 306
+przef x 351 przef y 315
+x 428 y 310
+przef x 465 przef y 334
+x 342 y 304
+przef x 350 przef y 313
+x 430 y 312
+przef x 461 przef y 332
+x 342 y 306
+przef x 348 przef y 311
+x 344 y 306
+przef x 347 przef y 310
+x 342 y 302
+przef x 346 przef y 308
+x 430 y 308
+przef x 458 przef y 329
+x 342 y 304
+przef x 345 przef y 307
+x 432 y 310
+przef x 456 przef y 327
+x 342 y 304
+przef x 344 przef y 306
+x 342 y 302
+przef x 343 przef y 304
+x 430 y 310
+przef x 452 przef y 325
+x 342 y 302
+przef x 343 przef y 303
+x 430 y 308
+przef x 449 przef y 322
+x 342 y 302
+przef x 342 przef y 302
+x 342 y 302
+przef x 342 przef y 302
+x 342 y 302
+przef x 341 przef y 301
+x 340 y 302
+przef x 341 przef y 301
+x 342 y 302
+przef x 341 przef y 300
+x 430 y 308
+przef x 447 przef y 320
+x 340 y 302
+przef x 340 przef y 300
+x 430 y 308
+przef x 444 przef y 317
+x 342 y 304
+przef x 340 przef y 300
+x 342 y 302
+przef x 340 przef y 300
+x 430 y 308
+przef x 442 przef y 316
+x 342 y 302
+przef x 340 przef y 300
+x 344 y 304
+przef x 341 przef y 301
+x 434 y 310
+przef x 440 przef y 314
+x 344 y 304
+przef x 341 przef y 301
+x 370 y 374
+przef x 425 przef y 328
+x 346 y 302
+przef x 342 przef y 301
+x 342 y 300
+przef x 405 przef y 322
+x 344 y 300
+przef x 342 przef y 301
+x 344 y 300
+przef x 343 przef y 300
+x 434 y 306
+przef x 408 przef y 319
+x 344 y 300
+przef x 343 przef y 300
+x 344 y 300
+przef x 343 przef y 300
+x 432 y 306
+przef x 411 przef y 316
+x 434 y 306
+przef x 415 przef y 314
+x 344 y 300
+przef x 343 przef y 299
+x 344 y 298
+przef x 344 przef y 299
+x 434 y 304
+przef x 418 przef y 311
+x 344 y 300
+przef x 344 przef y 299
+x 344 y 298
+przef x 344 przef y 298
+x 434 y 304
+przef x 420 przef y 309
+x 432 y 302
+przef x 423 przef y 307
+x 344 y 296
+przef x 344 przef y 297
+x 434 y 302
+przef x 425 przef y 305
+x 344 y 296
+przef x 344 przef y 297
+x 342 y 298
+przef x 343 przef y 297
+x 344 y 298
+przef x 343 przef y 297
+x 434 y 300
+przef x 427 przef y 303
+x 344 y 294
+przef x 343 przef y 296
+x 344 y 296
+przef x 344 przef y 295
+x 344 y 298
+przef x 344 przef y 295
+x 434 y 304
+przef x 429 przef y 302
+x 344 y 298
+przef x 344 przef y 296
+x 434 y 306
+przef x 430 przef y 302
+x 432 y 308
+przef x 431 przef y 302
+x 344 y 302
+przef x 344 przef y 297
+x 344 y 302
+przef x 344 przef y 298
+x 344 y 302
+przef x 344 przef y 299
+x 350 y 312
+przef x 345 przef y 302
+x 350 y 318
+przef x 346 przef y 306
+x 350 y 320
+przef x 347 przef y 309
+x 342 y 318
+przef x 346 przef y 312
+x 342 y 328
+przef x 345 przef y 317
+x 340 y 324
+przef x 344 przef y 320
+x 340 y 322
+przef x 343 przef y 322
+x 340 y 326
+przef x 342 przef y 324
+x 340 y 324
+przef x 341 przef y 326
+x 426 y 330
+przef x 430 przef y 308
+x 342 y 326
+przef x 341 przef y 327
+x 342 y 322
+przef x 341 przef y 327
+x 342 y 322
+przef x 341 przef y 327
+x 342 y 320
+przef x 341 przef y 327
+x 342 y 318
+przef x 341 przef y 326
+x 342 y 316
+przef x 341 przef y 324
+x 344 y 316
+przef x 341 przef y 323
+x 432 y 322
+przef x 431 przef y 311
+x 428 y 320
+przef x 431 przef y 313
+x 342 y 316
+przef x 341 przef y 321
+x 430 y 320
+przef x 431 przef y 315
+x 428 y 320
+przef x 430 przef y 316
+x 342 y 316
+przef x 341 przef y 320
+x 340 y 316
+przef x 341 przef y 319
+x 426 y 320
+przef x 429 przef y 318
+x 342 y 314
+przef x 341 przef y 318
+x 428 y 320
+przef x 429 przef y 319
+x 342 y 314
+przef x 341 przef y 317
+x 428 y 320
+przef x 429 przef y 320
+x 430 y 320
+przef x 429 przef y 320
+x 342 y 314
+przef x 341 przef y 316
+x 342 y 314
+przef x 341 przef y 315
+x 430 y 318
+przef x 429 przef y 320
+x 342 y 314
+przef x 341 przef y 314
+x 430 y 318
+przef x 429 przef y 320
+x 342 y 314
+przef x 341 przef y 314
+x 430 y 320
+przef x 429 przef y 321
+x 342 y 314
+przef x 341 przef y 313
+x 430 y 322
+przef x 429 przef y 321
+x 342 y 314
+przef x 341 przef y 313
+x 430 y 318
+przef x 430 przef y 321
+x 346 y 312
+przef x 342 przef y 312
+x 344 y 312
+przef x 343 przef y 312
+x 344 y 310
+przef x 343 przef y 311
+x 432 y 316
+przef x 430 przef y 320
+x 344 y 310
+przef x 343 przef y 310
+x 432 y 316
+przef x 430 przef y 319
+x 344 y 310
+przef x 343 przef y 309
+x 430 y 316
+przef x 430 przef y 319
+x 344 y 308
+przef x 344 przef y 309
+x 432 y 314
+przef x 431 przef y 318
+x 344 y 308
+przef x 344 przef y 308
+x 344 y 308
+przef x 344 przef y 307
+x 432 y 314
+przef x 431 przef y 317
+x 344 y 306
+przef x 344 przef y 306
+x 432 y 312
+przef x 431 przef y 315
+x 344 y 306
+przef x 344 przef y 306
+x 432 y 312
+przef x 431 przef y 314
+x 344 y 306
+przef x 344 przef y 305
+x 432 y 312
+przef x 432 przef y 313
+x 432 y 310
+przef x 432 przef y 312
+x 344 y 306
+przef x 344 przef y 305
+x 432 y 310
+przef x 432 przef y 311
+x 344 y 306
+przef x 344 przef y 304
+x 434 y 310
+przef x 432 przef y 310
+x 344 y 306
+przef x 344 przef y 304
+x 432 y 310
+przef x 432 przef y 310
+x 344 y 306
+przef x 344 przef y 304
+x 346 y 306
+przef x 344 przef y 304
+x 346 y 306
+przef x 345 przef y 304
+x 432 y 312
+przef x 432 przef y 310
+x 344 y 306
+przef x 344 przef y 304
+x 434 y 312
+przef x 433 przef y 310
+x 432 y 312
+przef x 433 przef y 310
+x 346 y 306
+przef x 345 przef y 304
+x 346 y 304
+przef x 345 przef y 304
+x 434 y 310
+przef x 433 przef y 309
+x 432 y 310
+przef x 433 przef y 309
+x 346 y 306
+przef x 345 przef y 304
+x 432 y 310
+przef x 433 przef y 309
+x 346 y 304
+przef x 345 przef y 304
+x 346 y 302
+przef x 346 przef y 303
+x 434 y 308
+przef x 433 przef y 308
+x 432 y 308
+przef x 433 przef y 308
+x 346 y 304
+przef x 346 przef y 303
+x 346 y 302
+przef x 346 przef y 302
+x 434 y 310
+przef x 433 przef y 308
+x 432 y 308
+przef x 433 przef y 307
+x 344 y 304
+przef x 345 przef y 302
+x 432 y 308
+przef x 432 przef y 307
+x 344 y 304
+przef x 345 przef y 302
+x 344 y 302
+przef x 345 przef y 302
+x 432 y 308
+przef x 432 przef y 307
+x 342 y 306
+przef x 344 przef y 303
+x 432 y 312
+przef x 432 przef y 308
+x 432 y 310
+przef x 432 przef y 308
+x 434 y 312
+przef x 432 przef y 309
+x 432 y 310
+przef x 432 przef y 309
+x 344 y 306
+przef x 344 przef y 303
+x 432 y 312
+przef x 432 przef y 309
+x 434 y 312
+przef x 432 przef y 310
+x 344 y 306
+przef x 344 przef y 304
+x 434 y 310
+przef x 433 przef y 310
+x 346 y 302
+przef x 344 przef y 303
+x 434 y 310
+przef x 433 przef y 310
+x 434 y 310
+przef x 433 przef y 310
+x 346 y 304
+przef x 344 przef y 303
+x 438 y 308
+przef x 434 przef y 309
+x 438 y 308
+przef x 435 przef y 309
+x 348 y 302
+przef x 345 przef y 303
+x 438 y 308
+przef x 436 przef y 309
+x 348 y 302
+przef x 346 przef y 302
+x 348 y 302
+przef x 346 przef y 302
+x 350 y 304
+przef x 347 przef y 302
+x 440 y 308
+przef x 437 przef y 308
+x 438 y 308
+przef x 437 przef y 308
+x 348 y 304
+przef x 347 przef y 303
+x 438 y 308
+przef x 438 przef y 308
+x 438 y 308
+przef x 438 przef y 308
+x 348 y 304
+przef x 348 przef y 303
+x 438 y 310
+przef x 438 przef y 308
+x 348 y 304
+przef x 348 przef y 303
+x 438 y 310
+przef x 438 przef y 308
+x 348 y 306
+przef x 348 przef y 303
+x 346 y 304
+przef x 348 przef y 303
+x 436 y 310
+przef x 438 przef y 308
+x 346 y 304
+przef x 347 przef y 304
+x 434 y 310
+przef x 437 przef y 309
+x 434 y 310
+przef x 437 przef y 309
+x 346 y 304
+przef x 347 przef y 304
+x 344 y 304
+przef x 346 przef y 304
+x 338 y 302
+przef x 344 przef y 303
+x 428 y 308
+przef x 435 przef y 309
+x 428 y 308
+przef x 433 przef y 308
+x 336 y 302
+przef x 342 przef y 303
+x 426 y 308
+przef x 431 przef y 308
+x 354 y 316
+przef x 344 przef y 306
+x 352 y 316
+przef x 346 przef y 308
+x 352 y 316
+przef x 347 przef y 310
+x 336 y 300
+przef x 345 przef y 308
+x 374 y 368
+przef x 418 przef y 321
+x 426 y 308
+przef x 418 przef y 320
+x 354 y 318
+przef x 346 przef y 311
+x 354 y 320
+przef x 348 przef y 313
+x 426 y 308
+przef x 418 przef y 318
+x 354 y 318
+przef x 350 przef y 315
+x 354 y 316
+przef x 351 przef y 316
+x 426 y 306
+przef x 418 przef y 316
+x 338 y 302
+przef x 348 przef y 313
+x 374 y 370
+przef x 407 przef y 328
+x 338 y 304
+przef x 346 przef y 312
+x 372 y 370
+przef x 397 przef y 339
+x 356 y 312
+przef x 348 przef y 312
+x 374 y 368
+przef x 389 przef y 348
+x 346 y 298
+przef x 348 przef y 309
+x 436 y 306
+przef x 396 przef y 341
+x 434 y 304
+przef x 403 przef y 335
+x 434 y 304
+przef x 408 przef y 329
+x 432 y 306
+przef x 413 przef y 324
+x 342 y 302
+przef x 346 przef y 307
+x 342 y 302
+przef x 345 przef y 306
+x 344 y 302
+przef x 345 przef y 304
+x 432 y 308
+przef x 417 przef y 320
+x 432 y 308
+przef x 421 przef y 317
+x 432 y 308
+przef x 424 przef y 314
+x 342 y 302
+przef x 344 przef y 303
+x 346 y 302
+przef x 344 przef y 302
+x 434 y 308
+przef x 427 przef y 311
+x 346 y 302
+przef x 344 przef y 302
+x 346 y 300
+przef x 344 przef y 301
+x 436 y 308
+przef x 430 przef y 310
+x 436 y 306
+przef x 432 przef y 308
+x 432 y 304
+przef x 434 przef y 305
+x 434 y 304
+przef x 435 przef y 304
+x 344 y 298
+przef x 344 przef y 299
+x 346 y 294
+przef x 344 przef y 297
+x 434 y 300
+przef x 436 przef y 302
+x 436 y 300
+przef x 437 przef y 300
+x 348 y 292
+przef x 345 przef y 295
+x 348 y 290
+przef x 345 przef y 293
+x 438 y 296
+przef x 438 przef y 298
+x 438 y 294
+przef x 439 przef y 295
+x 348 y 286
+przef x 346 przef y 291
+x 440 y 280
+przef x 440 przef y 290
+x 348 y 276
+przef x 346 przef y 286
+x 438 y 286
+przef x 441 przef y 288
+x 348 y 282
+przef x 347 przef y 284
+x 438 y 290
+przef x 441 przef y 286
+x 438 y 292
+przef x 441 przef y 286
+x 438 y 292
+przef x 441 przef y 286
+x 438 y 292
+przef x 441 przef y 286
+x 348 y 288
+przef x 347 przef y 283
+x 438 y 294
+przef x 441 przef y 286
+x 438 y 294
+przef x 440 przef y 287
+x 438 y 294
+przef x 440 przef y 288
+x 348 y 288
+przef x 347 przef y 283
+x 438 y 294
+przef x 440 przef y 288
+x 438 y 294
+przef x 440 przef y 289
+x 348 y 288
+przef x 347 przef y 283
+x 438 y 296
+przef x 439 przef y 290
+x 434 y 296
+przef x 438 przef y 291
+x 434 y 294
+przef x 437 przef y 292
+x 340 y 286
+przef x 346 przef y 282
+x 340 y 286
+przef x 344 przef y 282
+x 430 y 290
+przef x 435 przef y 291
+x 340 y 282
+przef x 343 przef y 281
+x 340 y 282
+przef x 342 przef y 280
+x 438 y 286
+przef x 436 przef y 290
+x 348 y 282
+przef x 343 przef y 280
+x 348 y 282
+przef x 344 przef y 279
+x 376 y 352
+przef x 422 przef y 303
+x 434 y 294
+przef x 423 przef y 302
+x 436 y 294
+przef x 425 przef y 301
+x 374 y 358
+przef x 412 przef y 315
+x 374 y 358
+przef x 402 przef y 326
+x 344 y 288
+przef x 344 przef y 281
+x 344 y 286
+przef x 343 przef y 281
+x 342 y 284
+przef x 343 przef y 281
+x 432 y 288
+przef x 406 przef y 320
+x 344 y 280
+przef x 343 przef y 281
+x 352 y 280
+przef x 345 przef y 280
+x 442 y 288
+przef x 412 przef y 315
+x 352 y 280
+przef x 346 przef y 279
+x 346 y 280
+przef x 346 przef y 279
+x 436 y 286
+przef x 416 przef y 309
+x 436 y 286
+przef x 420 przef y 304
+x 344 y 280
+przef x 346 przef y 279
+x 346 y 282
+przef x 346 przef y 279
+x 436 y 286
+przef x 423 przef y 300
+x 342 y 284
+przef x 345 przef y 280
+x 344 y 286
+przef x 345 przef y 281
+x 344 y 286
+przef x 344 przef y 282
+x 344 y 284
+przef x 344 przef y 282
+x 344 y 280
+przef x 344 przef y 282
+x 436 y 290
+przef x 426 przef y 297
+x 422 y 298
+przef x 425 przef y 297
+x 340 y 284
+przef x 343 przef y 282
+x 340 y 282
+przef x 342 przef y 282
+x 340 y 282
+przef x 341 przef y 282
+x 430 y 286
+przef x 427 przef y 293
+x 340 y 280
+przef x 340 przef y 281
+x 346 y 280
+przef x 341 przef y 281
+x 346 y 280
+przef x 342 przef y 281
+x 438 y 286
+przef x 429 przef y 291
+x 438 y 284
+przef x 432 przef y 288
+x 346 y 278
+przef x 343 przef y 280
+x 432 y 282
+przef x 433 przef y 285
+x 340 y 278
+przef x 342 przef y 279
+x 340 y 282
+przef x 341 przef y 279
+x 366 y 358
+przef x 418 przef y 300
+x 330 y 296
+przef x 339 przef y 283
+x 332 y 302
+przef x 398 przef y 301
+x 446 y 314
+przef x 406 przef y 304
+x 338 y 284
+przef x 338 przef y 283
+x 344 y 286
+przef x 339 przef y 284
+x 436 y 292
+przef x 411 przef y 302
+x 344 y 284
+przef x 340 przef y 284
+x 438 y 290
+przef x 416 przef y 299
+x 344 y 286
+przef x 340 przef y 285
+x 436 y 294
+przef x 420 przef y 298
+x 344 y 286
+przef x 341 przef y 285
+x 438 y 292
+przef x 424 przef y 296
+x 438 y 292
+przef x 428 przef y 295
+x 346 y 288
+przef x 342 przef y 286
+x 348 y 286
+przef x 343 przef y 286
+x 346 y 288
+przef x 344 przef y 287
+x 440 y 294
+przef x 431 przef y 294
+x 440 y 296
+przef x 434 przef y 294
+x 342 y 294
+przef x 344 przef y 289
+x 434 y 300
+przef x 435 przef y 295
+x 342 y 294
+przef x 343 przef y 290
