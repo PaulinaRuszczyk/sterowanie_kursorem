@@ -14,7 +14,7 @@ using namespace cv;
 Mutex blokada;
 Point oko_lewe=Point(0,0);
 Point oko_prawe=Point(0,0); 
-Point srodek;
+Point srodek, srodekl;
 Point  przefiltrowane_x;
 Point przefiltrowane_l;
 int t=0;
@@ -272,6 +272,7 @@ void f1()
 	    Point &srodek_oka_lewego=oko_lewe;
         Point &srodek_oka_prawego=oko_prawe; 
         przefiltrowane_x=Point(0,0);
+        przefiltrowane_l=Point(0,0);
         float srodek;
         if(!oczy.empty())
             srodek=oczy[0].x+oczy[0].width/2;
@@ -370,24 +371,27 @@ void f1()
     }
     zapis.close();
 }
-bool mrugniecie(Point p)
+bool mrugniecie(Point p, Point l)
 {
-      //cout<<p.x<<"  "<<p.y<<endl;
+      cout<<p.x<<"  "<<p.y<<"|  " <<l.x<<"      "<<l.y<<endl;
 
-    if(p.x==0 && p.x==0)
-        {
-            t++;
-            if(t>10)
-                return true;
+    if(p.x==0 && p.y==0 &&l.x==0 && l.y==0)
+    {
 
-            //cout<<t<<" | ";
-            return false;
-        }
-    else
+        if(t>3)
         {
             t=0;
-            return false;
+            return true;
         }
+        t++;
+        cout<<t<<" | ";
+        return false;
+    }
+    else
+    {
+        t=0;
+        return false;
+    }
 }
 
 /////////////////////////////////////////
@@ -404,10 +408,14 @@ void f2()
     ruch_pionowy[1]=0;
 
     Point poprzedni=Point(0,0);
+    Point poprzednil=Point(0,0);
     sleep(10);
     vector <Point> punkty(5);
-    Point tymczasowy;
+    vector <Point> punktyl(5);
+
+    Point tymczasowy, tymczasowyl;
     fill(punkty.begin(),punkty.end(), Point(0,0));
+    fill(punktyl.begin(),punktyl.end(), Point(0,0));
     Mat konfiguracja(s->height,s->width,CV_8UC3, Scalar(0,0,0));
     namedWindow ("Konfiguracja", WINDOW_NORMAL);
     setWindowProperty("Konfiguracja", WND_PROP_FULLSCREEN, WINDOW_FULLSCREEN);
@@ -416,18 +424,24 @@ void f2()
         blokada.lock();
         kopia.x=przefiltrowane_x.x;
         kopia.y=przefiltrowane_x.y;
+        kopial.x=przefiltrowane_l.x;
+        kopial.y=przefiltrowane_l.y;
         blokada.unlock();
-        if(kopia.x!=0 && kopia.y!=0)
+        if(kopia.x!=0 && kopia.y!=0 && kopial.x!=0 && kopial.y!=0)
         { //bool a=true;
                 if(poprzedni!=Point(0,0))
                 {
                         poprzedni=tymczasowy;
                         tymczasowy=kopia;
+                        poprzednil=tymczasowyl;
+                        tymczasowyl=kopial;
                 }
                 else
                 {
                     tymczasowy =kopia;
                     poprzedni=tymczasowy;
+                    tymczasowyl =kopial;
+                    poprzednil=tymczasowyl;
                 }  
         }
         if(punkty[3].x!=0 && punkty[4].x==0)
@@ -435,22 +449,27 @@ void f2()
             
             circle(konfiguracja, Point(s->width/2,s->height/2), 50, Scalar(0,155,0), FILLED);
             
-            if(mrugniecie(kopia)) 
+            if(mrugniecie(kopia, kopial)) 
             {
                 punkty[4].x=tymczasowy.x;
                 punkty[4].y=tymczasowy.y;
+                punktyl[4].x=tymczasowyl.x;
+                punktyl[4].y=tymczasowyl.y;
                 circle(konfiguracja, Point(s->width/2,s->height/2), 50, Scalar(0,0,0), FILLED);
-                sleep(1);
+                sleep(3);
+                
             }
         }
         if(punkty[2].x!=0 && punkty[3].x==0)
         {
             circle(konfiguracja, Point(50,s->height-50), 50, Scalar(0,155,0), FILLED);
            
-            if(mrugniecie(kopia))
+            if(mrugniecie(kopia, kopial))
             {   
                 punkty[3].x=tymczasowy.x;
                 punkty[3].y=tymczasowy.y;
+                punktyl[3].x=tymczasowyl.x;
+                punktyl[3].y=tymczasowyl.y;
                 circle(konfiguracja, Point(50,s->height-50), 50, Scalar(0,0,0), FILLED);
                 sleep(3);
             }
@@ -459,10 +478,12 @@ void f2()
         {
             circle(konfiguracja, Point(s->width-50,s->height-50), 50, Scalar(0,155,0), FILLED);
            
-            if(mrugniecie(kopia))
+            if(mrugniecie(kopia, kopial))
             {
                 punkty[2].x=tymczasowy.x;
                 punkty[2].y=tymczasowy.y;
+                punktyl[2].x=tymczasowyl.x;
+                punktyl[2].y=tymczasowyl.y;
                 circle(konfiguracja, Point(s->width-50,s->height-50), 50, Scalar(0,0,0), FILLED);
                 sleep(3);
             }
@@ -470,11 +491,12 @@ void f2()
         if(punkty[0].x!=0 && punkty[1].x==0)
         {
             circle(konfiguracja, Point(s->width-50,50), 50, Scalar(0,155,0), FILLED);
-            
-            if(mrugniecie(kopia))
+            if(mrugniecie(kopia, kopial))
             {   
                 punkty[1].x=tymczasowy.x;
                 punkty[1].y=tymczasowy.y;
+                punktyl[1].x=tymczasowyl.x;
+                punktyl[1].y=tymczasowyl.y;
                 circle(konfiguracja, Point(s->width-50,50), 50, Scalar(0,0,0), FILLED);
                 sleep(3); 
             }
@@ -483,11 +505,15 @@ void f2()
         {
             circle(konfiguracja, Point(50,50), 50, Scalar(250,0,125), FILLED);
             
-            if(mrugniecie(kopia))
+            if(mrugniecie(kopia, kopial))
             {
                 punkty[0].x=tymczasowy.x;
                 punkty[0].y=tymczasowy.y;
+                punktyl[0].x=tymczasowyl.x;
+                punktyl[0].y=tymczasowyl.y;
                 circle(konfiguracja, Point(50,50), 50, Scalar(0,0,0), FILLED);
+                sleep(3);
+                
             }
         }
         imshow ("Konfiguracja", konfiguracja);
@@ -495,10 +521,11 @@ void f2()
     //cout<<"HE";
     destroyWindow("Konfiguracja");
     srodek=punkty[4];
+
    // ruch_poziomy=(punkty[1].x-punkty[0].x+punkty[2].x-punkty[3].x)/2/450;
     //ruch_pionowy=(punkty[3].y-punkty[0].y+punkty[2].y-punkty[1].y)/2/450;
     Mat sledzenie(s->height,s->width,CV_8UC3, Scalar(0,0,0));
-     namedWindow ("sledzenie", WINDOW_NORMAL);
+    namedWindow ("sledzenie", WINDOW_NORMAL);
     setWindowProperty("sledzenie", WND_PROP_FULLSCREEN, WINDOW_FULLSCREEN);
 
     while(true)
@@ -506,6 +533,7 @@ void f2()
         blokada.lock();
         kopia.x=przefiltrowane_x.x;
         kopia.y=przefiltrowane_x.y;
+
         blokada.unlock();
        if(kopia.x!=0 && kopia.y!=0 )//&& oko_lewe.x!=0 && oko_lewe.y!=0)
         {
