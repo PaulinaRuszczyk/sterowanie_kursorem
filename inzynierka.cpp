@@ -12,6 +12,7 @@ using namespace cv;
 
 //zmienne globalne
 Mutex blokada;
+int pom;
 Point oko_lewe=Point(0,0);
 Point oko_prawe=Point(0,0); 
 Point srodek, srodekl;
@@ -32,6 +33,7 @@ int vmax=70;
 int vmin=0;
 //macierze
 Mat na_zywo, dylatacja, erozja, Blur;
+Mat rysuj;
 Mat mask;
 Mat hsv;
 Mat szare_zdjecie;
@@ -129,14 +131,17 @@ void f1()
     setIdentity(filtr1.errorCovPost, Scalar::all(.1)); 
      Mat_<float> macierz_pozycji_l(2,1);
      
-     ofstream zapis("oko.txt");
+     //ofstream zapis("oko.txt");
 
     //Pętla główna
     while(waitKey(20)!=27)
     {   
         przechwycenie>>na_zywo;
+
+       imwrite("nazywo.jpg", na_zywo);
+       na_zywo=imread("nazywo.jpg",IMREAD_COLOR);
         //konwersja na szaro
-        cvtColor(na_zywo, szare_zdjecie, COLOR_BGR2GRAY);
+        cvtColor(na_zywo, szare_zdjecie, COLOR_RGB2GRAY);
         imshow("szare zdjęcie",szare_zdjecie);
 
         //equalizeHist(szare_zdjecie, szare_zdjecie);
@@ -198,10 +203,13 @@ void f1()
         Point srodek_lewy;
         Point srodek_prawy;
         int sumax, sumay, ilosc_px;
-        oko_lewe=Point(0,0);
+     /* oko_lewe=Point(0,0);
         oko_prawe=Point(0,0); 
 	    Point &srodek_oka_lewego=oko_lewe;
         Point &srodek_oka_prawego=oko_prawe; 
+/*
+        //trzeba zrobić zmienną żeby było oko 
+
         //Znalezienie źrenic licząć środek jedynek
         for(int i=0; i<binarny.size(); i++)
         {   sumax=0;
@@ -227,6 +235,12 @@ void f1()
                 punkty[i].y=sumay/ilosc_px;
                 circle(na_zywo, Point(punkty[i].x+oczy[i].x,punkty[i].y+oczy[i].y), 15, Scalar(0,0,255), 4);
             }
+            else
+            {
+                punkty[i].x=0;
+                punkty[i].y=0;
+            }
+            cout<<punkty[i].x<<"   "<<punkty[i].y<< "|";
             if(i==1)
             {
                 vector <bool> czylewe(2);
@@ -250,12 +264,13 @@ void f1()
                         Point przewidziany_punkt_l (przewidziane_l.at<float>(0), przewidziane_l.at<float>(1));
                         blokada.lock();
                         przefiltrowane_l=przewidziany_punkt_l;
-                        zapis<<"x "<<srodek_oka_lewego.x<<" ";
-                        zapis<<"y "<<srodek_oka_lewego.y<<endl;
-                        zapis<<"przef x "<<przefiltrowane_l.x<<" ";
-                        zapis<<"przef y "<<przefiltrowane_l.y<<endl;
+                        // zapis<<"x "<<srodek_oka_lewego.x<<" ";
+                        // zapis<<"y "<<srodek_oka_lewego.y<<endl;
+                        // zapis<<"przef x "<<przefiltrowane_l.x<<" ";
+                        // zapis<<"przef y "<<przefiltrowane_l.y<<endl;
                         circle(na_zywo, przefiltrowane_l, 15, Scalar(255, 255, 0), 2, 8, 0);
                         blokada.unlock();
+                        
                     }
                     else
                     {
@@ -267,10 +282,10 @@ void f1()
                         Point przewidziany_punkt (przewidziane.at<float>(0), przewidziane.at<float>(1));
                         blokada.lock();
                         przefiltrowane_x=przewidziany_punkt;
-                        zapis<<"x "<<srodek_oka_prawego.x<<" ";
-                        zapis<<"y "<<srodek_oka_prawego.y<<endl;
-                        zapis<<"przef x "<<przefiltrowane_x.x<<" ";
-                        zapis<<"przef y "<<przefiltrowane_x.y<<endl;
+                        // zapis<<"x "<<srodek_oka_prawego.x<<" ";
+                        // zapis<<"y "<<srodek_oka_prawego.y<<endl;
+                        // zapis<<"przef x "<<przefiltrowane_x.x<<" ";
+                        // zapis<<"przef y "<<przefiltrowane_x.y<<endl;
                         circle(na_zywo, przefiltrowane_x, 15, Scalar(255, 255, 0), 2, 8, 0);
                         blokada.unlock();
                     }
@@ -279,13 +294,91 @@ void f1()
                 }
             }
         }
-
-        //Zaznaczenie krawędzi
-        GaussianBlur(dylatacja,Blur, Size(5,5),3,0);
+*/
+       // Zaznaczenie krawędzi Cannym 
+        GaussianBlur(mask,Blur, Size(5,5),3,0);
         Canny(Blur,kontury,25,70);
         Mat kernel2=getStructuringElement(MORPH_RECT, Size(3,3));
         dilate(kontury, kontury,kernel2);
-        imshow("kontury", kontury);
+        //imshow("kontury", kontury);
+
+       // iny sposob
+       Mat src_szary;
+       kontury.convertTo(rysuj, CV_8U);
+        imshow("coto", rysuj);
+        imwrite("output.jpg", rysuj);
+        Mat src= imread("output.jpg",1);
+        cvtColor(src, src_szary, COLOR_RGB2GRAY);
+        GaussianBlur(src_szary, src_szary, Size(9,9),2 ,2);
+        vector <Vec3f> circles;
+        HoughCircles(src_szary, circles, HOUGH_GRADIENT, 2, src_szary.rows / 8, 150, 10, 8, 20);
+        oko_lewe=Point(0,0);
+        oko_prawe=Point(0,0); 
+	    Point &srodek_oka_lewego=oko_lewe;
+        Point &srodek_oka_prawego=oko_prawe; 
+        przefiltrowane_x=Point(0,0);
+        przefiltrowane_l=Point(0,0);
+        for(size_t i=0; i<circles.size(); i++) 
+        {
+            Point center(cvRound(circles[i][0]), cvRound(circles[i][1]));
+            for( int j=0; j<oczy.size(); j++)
+            {
+                if(center.x>oczy[j].x && center.x<oczy[j].x+oczy[j].width &&center.y>oczy[j].y && center.y < oczy[j].y+oczy[j].height)
+                {
+                    vector <bool> czylewe(2);
+                    if(oczy[0].x<oczy[1].x)
+                    {   czylewe[1]=false;
+                        czylewe[0]=true;
+                    }
+                    else
+                    {   czylewe[1]=true;
+                        czylewe[0]=false;
+                    }
+                    
+                    int radius = cvRound(circles[i][2]);
+                    circle(na_zywo, center, radius, Scalar(255, 255, 255), 2, 8, 0);
+                    if(czylewe[j])
+                    {
+        	            srodek_oka_lewego=center;
+                        macierz_pozycji_l(0) = oko_lewe.x;
+                        macierz_pozycji_l(1) = oko_lewe.y;
+                        filtr1.predict();
+                        Mat przewidziane_l= filtr1.correct(macierz_pozycji_l);
+                        Point przewidziany_punkt_l (przewidziane_l.at<float>(0), przewidziane_l.at<float>(1));
+                        blokada.lock();
+                        przefiltrowane_l=przewidziany_punkt_l;
+                        // zapis<<"x "<<srodek_oka_lewego.x<<" ";
+                        // zapis<<"y "<<srodek_oka_lewego.y<<endl;
+                        // zapis<<"przef x "<<przefiltrowane_l.x<<" ";
+                        // zapis<<"przef y "<<przefiltrowane_l.y<<endl;
+                        circle(na_zywo, przefiltrowane_l, radius, Scalar(255, 0, 0), 2, 8, 0);
+                        blokada.unlock();
+                    }
+                    else
+                    {
+                        srodek_oka_prawego=center;
+                        macierz_pozycji(0) = oko_prawe.x;
+                        macierz_pozycji(1) = oko_prawe.y;
+                        filtr.predict();
+                        Mat przewidziane= filtr.correct(macierz_pozycji);
+                        Point przewidziany_punkt (przewidziane.at<float>(0), przewidziane.at<float>(1));
+                        blokada.lock();
+                        przefiltrowane_x=przewidziany_punkt;
+                        // zapis<<"x "<<srodek_oka_prawego.x<<" ";
+                        // zapis<<"y "<<srodek_oka_prawego.y<<endl;
+                        // zapis<<"przef x "<<przefiltrowane_x.x<<" ";
+                        // zapis<<"przef y "<<przefiltrowane_x.y<<endl;
+                        circle(na_zywo, przefiltrowane_x, radius, Scalar(255, 0, 0), 2, 8, 0);
+                        blokada.unlock();
+                    }
+
+
+                }
+            }  
+            
+        }
+        imshow("CZy", src);
+
         /*
       //  znajdowanie konturów za pomocą find contours
         vector<vector<Point>> znalezione;
@@ -379,29 +472,30 @@ void f1()
             
         }*/
         //Filtr Kalmana przewidywanie i poprawa
-        macierz_pozycji(0) = oko_prawe.x;
-        macierz_pozycji(1) = oko_prawe.y;
-        filtr.predict();
-        Mat przewidziane= filtr.correct(macierz_pozycji);
-        Point przewidziany_punkt (przewidziane.at<float>(0), przewidziane.at<float>(1));
-        przefiltrowane_x=przewidziany_punkt;
-        zapis<<"x "<<srodek_oka_prawego.x<<" ";
-        zapis<<"y "<<srodek_oka_prawego.y<<endl;
-        zapis<<"przef x "<<przefiltrowane_x.x<<" ";
-        zapis<<"przef y "<<przefiltrowane_x.y<<endl;
-
+        //  macierz_pozycji(0) = oko_prawe.x;
+        // macierz_pozycji(1) = oko_prawe.y;
+        // filtr.predict();
+        // Mat przewidziane= filtr.correct(macierz_pozycji);
+        // Point przewidziany_punkt (przewidziane.at<float>(0), przewidziane.at<float>(1));
+        // przefiltrowane_x=przewidziany_punkt;
+        // zapis<<"x "<<srodek_oka_prawego.x<<" ";
+        // zapis<<"y "<<srodek_oka_prawego.y<<endl;
+        // zapis<<"przef x "<<przefiltrowane_x.x<<" ";
+        // zapis<<"przef y "<<przefiltrowane_x.y<<endl;
+       // cout<<endl;
         if (na_zywo.empty())
             cout<<"k";
+        
         imshow("live",na_zywo);
 
     }
-    zapis.close();
+    //zapis.close();
 }
 
 //Funkcja wykrywająca mrugnięcie
 bool mrugniecie(Point p, Point l)
 {
-     // cout<<p.x<<"  "<<p.y<<"|  " <<l.x<<"      "<<l.y<<endl;
+     //cout<<p.x<<"  "<<p.y<<"|  " <<l.x<<"      "<<l.y<<endl;
 
     if(p.x==0 && p.y==0 &&l.x==0 && l.y==0)
     {
@@ -421,13 +515,12 @@ bool mrugniecie(Point p, Point l)
         return false;
     }
 }
-
-/////////////////////////////////////////
+//Drugi wątek do konfiguracji i wyświetlenia okna ze śledzonym wzrokiem
 void f2()
 {
     Point kopia, kopial;
     Display* d=XOpenDisplay(NULL);
-    Screen* s= DefaultScreenOfDisplay(d);=
+    Screen* s= DefaultScreenOfDisplay(d);
 
     ruch_poziomy[0]=0;
     ruch_pionowy[0]=0;
@@ -574,9 +667,9 @@ void f2()
 int main()
 {
     std::thread thd1(f1); 
-    //thread thd2(f2); 
+    thread thd2(f2); 
     thd1.join();
-   // thd2.join();
+    thd2.join();
     return 0;
 }
 // zrobic stopien wychylenia gdzzie początek układu współrzędnych byłby w lewym górnym rogu
