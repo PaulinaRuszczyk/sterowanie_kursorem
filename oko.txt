@@ -1,1090 +1,336 @@
-x 266 y 212
-przef x 177 przef y 141
-x 314 y 312
-przef x 209 przef y 208
-x 274 y 210
-przef x 271 przef y 210
-x 312 y 198
-przef x 330 przef y 228
-x 408 y 200
-przef x 376 przef y 237
-x 312 y 198
-przef x 354 przef y 232
-x 410 y 200
-przef x 448 przef y 238
-x 312 y 196
-przef x 363 przef y 231
-x 412 y 198
-przef x 475 przef y 233
-x 314 y 196
-przef x 366 przef y 228
-x 412 y 198
-przef x 484 przef y 228
-x 314 y 194
-przef x 366 przef y 225
-x 314 y 192
-przef x 364 przef y 221
-x 412 y 196
-przef x 486 przef y 223
-x 316 y 192
-przef x 363 przef y 218
-x 414 y 196
-przef x 485 przef y 219
-x 414 y 196
-przef x 482 przef y 215
-x 314 y 188
-przef x 360 przef y 214
-x 414 y 190
-przef x 479 przef y 211
-x 416 y 186
-przef x 475 przef y 206
-x 316 y 188
-przef x 358 przef y 210
-x 318 y 184
-przef x 356 przef y 206
-x 416 y 190
-przef x 472 przef y 203
-x 318 y 188
-przef x 353 przef y 204
-x 416 y 192
-przef x 468 przef y 202
-x 316 y 186
-przef x 351 przef y 201
-x 316 y 188
-przef x 348 przef y 200
-x 416 y 192
-przef x 465 przef y 200
-x 314 y 186
-przef x 344 przef y 198
-x 396 y 200
-przef x 456 przef y 201
-x 314 y 192
-przef x 341 przef y 197
-x 314 y 186
-przef x 338 przef y 195
-x 414 y 192
-przef x 452 przef y 200
-x 314 y 192
-przef x 335 przef y 195
-x 414 y 196
-przef x 449 przef y 200
-x 316 y 192
-przef x 332 przef y 195
-x 316 y 192
-przef x 330 przef y 194
-x 396 y 198
-przef x 441 przef y 200
-x 316 y 192
-przef x 328 przef y 194
-x 414 y 196
-przef x 438 przef y 199
-x 416 y 194
-przef x 436 przef y 199
-x 316 y 190
-przef x 326 przef y 193
-x 316 y 192
-przef x 324 przef y 193
-x 416 y 198
-przef x 434 przef y 199
-x 316 y 190
-przef x 322 przef y 192
-x 416 y 194
-przef x 431 przef y 198
-x 316 y 190
-przef x 321 przef y 192
-x 418 y 190
-przef x 430 przef y 196
-x 316 y 188
-przef x 320 przef y 191
-x 316 y 188
-przef x 319 przef y 190
-x 416 y 192
-przef x 428 przef y 195
-x 416 y 190
-przef x 426 przef y 194
-x 416 y 190
-przef x 424 przef y 193
-x 316 y 186
-przef x 318 przef y 189
-x 316 y 184
-przef x 317 przef y 187
-x 416 y 190
-przef x 422 przef y 192
-x 316 y 186
-przef x 316 przef y 187
-x 418 y 190
-przef x 421 przef y 191
-x 418 y 186
-przef x 420 przef y 189
-x 318 y 184
-przef x 316 przef y 185
-x 316 y 184
-przef x 316 przef y 185
-x 418 y 188
-przef x 420 przef y 188
-x 416 y 188
-przef x 419 przef y 188
-x 316 y 184
-przef x 315 przef y 184
-x 416 y 190
-przef x 418 przef y 188
-x 316 y 186
-przef x 315 przef y 184
-x 416 y 190
-przef x 417 przef y 188
-x 416 y 192
-przef x 416 przef y 188
-x 416 y 192
-przef x 416 przef y 189
-x 316 y 188
-przef x 315 przef y 184
-x 414 y 194
-przef x 415 przef y 189
-x 316 y 192
-przef x 315 przef y 185
-x 414 y 196
-przef x 414 przef y 191
-x 316 y 192
-przef x 315 przef y 187
-x 414 y 198
-przef x 414 przef y 192
-x 316 y 192
-przef x 315 przef y 188
-x 314 y 194
-przef x 314 przef y 189
-x 326 y 198
-przef x 316 przef y 191
-x 312 y 194
-przef x 315 przef y 192
-x 410 y 200
-przef x 412 przef y 194
-x 312 y 194
-przef x 314 przef y 193
-x 410 y 198
-przef x 411 przef y 195
-x 410 y 198
-przef x 410 przef y 196
-x 312 y 192
-przef x 314 przef y 193
-x 410 y 196
-przef x 409 przef y 196
-x 410 y 190
-przef x 409 przef y 195
-x 312 y 188
-przef x 313 przef y 192
-x 310 y 186
-przef x 312 przef y 191
-x 410 y 190
-przef x 409 przef y 194
-x 310 y 184
-przef x 311 przef y 189
-x 410 y 188
-przef x 408 przef y 193
-x 312 y 184
-przef x 311 przef y 188
-x 410 y 188
-przef x 408 przef y 192
-x 410 y 186
-przef x 408 przef y 190
-x 324 y 186
-przef x 313 przef y 187
-x 312 y 182
-przef x 313 przef y 186
-x 410 y 186
-przef x 408 przef y 189
-x 412 y 186
-przef x 408 przef y 188
-x 310 y 182
-przef x 312 przef y 184
-x 408 y 186
-przef x 408 przef y 187
-x 408 y 186
-przef x 408 przef y 186
-x 308 y 182
-przef x 311 przef y 183
-x 310 y 182
-przef x 310 przef y 182
-x 410 y 186
-przef x 408 przef y 185
-x 312 y 184
-przef x 310 przef y 182
-x 312 y 186
-przef x 310 przef y 182
-x 412 y 190
-przef x 408 przef y 186
-x 412 y 192
-przef x 409 przef y 187
-x 314 y 188
-przef x 311 przef y 183
-x 314 y 190
-przef x 311 przef y 184
-x 410 y 194
-przef x 409 przef y 188
-x 312 y 192
-przef x 311 przef y 186
-x 312 y 194
-przef x 311 przef y 188
-x 410 y 198
-przef x 409 przef y 190
-x 310 y 194
-przef x 311 przef y 189
-x 408 y 198
-przef x 409 przef y 192
-x 408 y 196
-przef x 408 przef y 193
-x 308 y 192
-przef x 310 przef y 190
-x 406 y 196
-przef x 408 przef y 194
-x 414 y 196
-przef x 409 przef y 195
-x 316 y 192
-przef x 311 przef y 191
-x 316 y 192
-przef x 312 przef y 191
-x 414 y 196
-przef x 410 przef y 195
-x 316 y 192
-przef x 313 przef y 192
-x 414 y 198
-przef x 411 przef y 196
-x 416 y 196
-przef x 412 przef y 196
-x 318 y 192
-przef x 314 przef y 192
-x 316 y 190
-przef x 315 przef y 192
-x 416 y 194
-przef x 413 przef y 196
-x 318 y 190
-przef x 315 przef y 192
-x 416 y 194
-przef x 414 przef y 196
-x 316 y 188
-przef x 316 przef y 191
-x 416 y 194
-przef x 415 przef y 196
-x 318 y 188
-przef x 316 przef y 190
-x 318 y 188
-przef x 317 przef y 190
-x 418 y 194
-przef x 416 przef y 195
-x 320 y 190
-przef x 318 przef y 190
-x 320 y 192
-przef x 319 przef y 190
-x 318 y 192
-przef x 319 przef y 190
-x 320 y 192
-przef x 319 przef y 191
-x 320 y 196
-przef x 320 przef y 192
-x 320 y 196
-przef x 320 przef y 193
-x 320 y 196
-przef x 320 przef y 194
-x 320 y 198
-przef x 320 przef y 195
-x 320 y 196
-przef x 321 przef y 195
-x 320 y 196
-przef x 321 przef y 196
-x 320 y 194
-przef x 321 przef y 196
-x 320 y 194
-przef x 321 przef y 196
-x 320 y 194
-przef x 321 przef y 195
-x 320 y 194
-przef x 320 przef y 195
-x 320 y 192
-przef x 320 przef y 194
-x 320 y 192
-przef x 320 przef y 194
-x 320 y 192
-przef x 320 przef y 193
-x 320 y 192
-przef x 320 przef y 193
-x 320 y 198
-przef x 320 przef y 194
-x 320 y 198
-przef x 320 przef y 195
-x 412 y 202
-przef x 415 przef y 197
-x 412 y 202
-przef x 415 przef y 198
-x 406 y 202
-przef x 413 przef y 199
-x 406 y 202
-przef x 411 przef y 200
-x 406 y 198
-przef x 410 przef y 200
-x 406 y 200
-przef x 409 przef y 200
-x 406 y 200
-przef x 408 przef y 201
-x 406 y 198
-przef x 407 przef y 200
-x 406 y 198
-przef x 406 przef y 200
-x 406 y 196
-przef x 406 przef y 199
-x 406 y 196
-przef x 405 przef y 198
-x 406 y 198
-przef x 405 przef y 198
-x 406 y 198
-przef x 405 przef y 198
-x 406 y 196
-przef x 404 przef y 197
-x 406 y 196
-przef x 404 przef y 197
-x 406 y 194
-przef x 404 przef y 196
-x 406 y 194
-przef x 404 przef y 195
-x 406 y 196
-przef x 404 przef y 195
-x 406 y 196
-przef x 404 przef y 195
-x 406 y 198
-przef x 404 przef y 195
-x 406 y 198
-przef x 405 przef y 196
-x 406 y 198
-przef x 405 przef y 196
-x 308 y 196
-przef x 317 przef y 195
-x 406 y 200
-przef x 405 przef y 197
-x 406 y 200
-przef x 405 przef y 197
-x 308 y 196
-przef x 315 przef y 195
-x 406 y 202
-przef x 405 przef y 198
-x 406 y 202
-przef x 405 przef y 199
-x 308 y 198
-przef x 313 przef y 196
-x 308 y 200
-przef x 311 przef y 197
-x 394 y 204
-przef x 402 przef y 200
-x 320 y 190
-przef x 312 przef y 195
-x 418 y 194
-przef x 406 przef y 199
-x 320 y 190
-przef x 313 przef y 194
-x 418 y 196
-przef x 408 przef y 199
-x 418 y 196
-przef x 411 przef y 198
-x 320 y 194
-przef x 314 przef y 194
-x 316 y 190
-przef x 314 przef y 193
-x 414 y 194
-przef x 412 przef y 197
-x 342 y 260
-przef x 397 przef y 211
-x 416 y 192
-przef x 400 przef y 208
-x 416 y 194
-przef x 403 przef y 205
-x 316 y 190
-przef x 315 przef y 192
-x 316 y 190
-przef x 315 przef y 191
-x 416 y 194
-przef x 405 przef y 203
-x 414 y 196
-przef x 407 przef y 202
-x 414 y 198
-przef x 409 przef y 201
-x 414 y 200
-przef x 410 przef y 200
-x 316 y 196
-przef x 315 przef y 192
-x 414 y 202
-przef x 412 przef y 201
-x 314 y 198
-przef x 314 przef y 193
-x 314 y 198
-przef x 314 przef y 194
-x 316 y 198
-przef x 314 przef y 195
-x 414 y 202
-przef x 413 przef y 201
-x 316 y 198
-przef x 314 przef y 196
-x 412 y 202
-przef x 413 przef y 201
-x 316 y 200
-przef x 315 przef y 197
-x 414 y 204
-przef x 414 przef y 201
-x 414 y 202
-przef x 414 przef y 202
-x 414 y 202
-przef x 414 przef y 202
-x 316 y 200
-przef x 315 przef y 198
-x 414 y 202
-przef x 415 przef y 202
-x 314 y 198
-przef x 315 przef y 198
-x 414 y 200
-przef x 415 przef y 201
-x 316 y 198
-przef x 315 przef y 198
-x 414 y 200
-przef x 415 przef y 201
-x 316 y 198
-przef x 315 przef y 198
-x 414 y 200
-przef x 415 przef y 200
-x 316 y 194
-przef x 315 przef y 197
-x 416 y 198
-przef x 415 przef y 200
-x 316 y 192
-przef x 315 przef y 196
-x 414 y 196
-przef x 415 przef y 199
-x 416 y 198
-przef x 416 przef y 198
-x 316 y 192
-przef x 315 przef y 195
-x 414 y 194
-przef x 415 przef y 197
-x 316 y 192
-przef x 315 przef y 194
-x 316 y 190
-przef x 315 przef y 193
-x 416 y 194
-przef x 416 przef y 196
-x 414 y 192
-przef x 415 przef y 194
-x 316 y 188
-przef x 315 przef y 192
-x 314 y 188
-przef x 315 przef y 190
-x 414 y 192
-przef x 415 przef y 193
-x 412 y 192
-przef x 414 przef y 192
-x 312 y 190
-przef x 314 przef y 190
-x 410 y 192
-przef x 413 przef y 192
-x 312 y 188
-przef x 314 przef y 189
-x 412 y 194
-przef x 413 przef y 191
-x 410 y 192
-przef x 412 przef y 191
-x 312 y 190
-przef x 313 przef y 188
-x 410 y 194
-przef x 411 przef y 191
-x 412 y 202
-przef x 411 przef y 193
-x 338 y 266
-przef x 394 przef y 209
-x 314 y 196
-przef x 313 przef y 190
-x 414 y 198
-przef x 397 przef y 208
-x 316 y 194
-przef x 313 przef y 190
-x 342 y 266
-przef x 383 przef y 222
-x 418 y 196
-przef x 388 przef y 218
-x 320 y 190
-przef x 315 przef y 190
-x 418 y 194
-przef x 393 przef y 214
-x 320 y 188
-przef x 316 przef y 189
-x 422 y 192
-przef x 399 przef y 210
-x 420 y 192
-przef x 403 przef y 207
-x 322 y 188
-przef x 317 przef y 188
-x 420 y 192
-przef x 407 przef y 203
-x 322 y 188
-przef x 318 przef y 188
-x 420 y 192
-przef x 410 przef y 201
-x 420 y 194
-przef x 413 przef y 199
-x 320 y 192
-przef x 319 przef y 188
-x 420 y 196
-przef x 415 przef y 197
-x 322 y 196
-przef x 320 przef y 190
-x 420 y 200
-przef x 417 przef y 197
-x 322 y 196
-przef x 321 przef y 191
-x 322 y 198
-przef x 321 przef y 193
-x 322 y 198
-przef x 322 przef y 194
-x 322 y 198
-przef x 322 przef y 195
-x 318 y 198
-przef x 322 przef y 196
-x 416 y 202
-przef x 418 przef y 198
-x 412 y 202
-przef x 417 przef y 198
-x 298 y 204
-przef x 316 przef y 198
-x 410 y 200
-przef x 417 przef y 198
-x 310 y 196
-przef x 315 przef y 198
-x 410 y 196
-przef x 416 przef y 197
-x 310 y 194
-przef x 313 przef y 198
-x 310 y 192
-przef x 312 przef y 197
-x 310 y 192
-przef x 392 przef y 195
-x 308 y 190
-przef x 310 przef y 195
-x 308 y 190
-przef x 309 przef y 194
-x 408 y 194
-przef x 394 przef y 195
-x 308 y 196
-przef x 308 przef y 194
-x 406 y 202
-przef x 395 przef y 196
-x 308 y 198
-przef x 307 przef y 195
-x 406 y 202
-przef x 396 przef y 197
-x 408 y 202
-przef x 398 przef y 198
-x 406 y 198
-przef x 399 przef y 197
-x 408 y 192
-przef x 400 przef y 196
-x 408 y 192
-przef x 402 przef y 195
-x 414 y 190
-przef x 404 przef y 193
-x 316 y 186
-przef x 308 przef y 193
-x 316 y 188
-przef x 310 przef y 192
-x 414 y 192
-przef x 407 przef y 192
-x 414 y 194
-przef x 408 przef y 192
-x 342 y 264
-przef x 394 przef y 208
-x 416 y 194
-przef x 398 przef y 206
-x 316 y 190
-przef x 311 przef y 191
-x 416 y 196
-przef x 401 przef y 204
-x 316 y 192
-przef x 312 przef y 191
-x 416 y 196
-przef x 404 przef y 203
-x 318 y 194
-przef x 313 przef y 191
-x 384 y 272
-przef x 400 przef y 219
-x 416 y 198
-przef x 403 przef y 216
-x 414 y 202
-przef x 406 przef y 214
-x 316 y 198
-przef x 386 przef y 211
-x 414 y 204
-przef x 390 przef y 210
-x 316 y 200
-przef x 313 przef y 193
-x 412 y 204
-przef x 394 przef y 209
-x 412 y 202
-przef x 398 przef y 208
-x 316 y 200
-przef x 314 przef y 194
-x 414 y 200
-przef x 401 przef y 206
-x 316 y 194
-przef x 315 przef y 194
-x 414 y 198
-przef x 404 przef y 204
-x 316 y 194
-przef x 315 przef y 194
-x 414 y 198
-przef x 407 przef y 202
-x 316 y 194
-przef x 315 przef y 194
-x 414 y 196
-przef x 409 przef y 200
-x 316 y 192
-przef x 316 przef y 194
-x 414 y 196
-przef x 411 przef y 199
-x 414 y 196
-przef x 412 przef y 197
-x 316 y 192
-przef x 316 przef y 193
-x 416 y 194
-przef x 414 przef y 196
-x 316 y 192
-przef x 316 przef y 193
-x 316 y 190
-przef x 316 przef y 192
-x 416 y 194
-przef x 415 przef y 195
-x 416 y 192
-przef x 416 przef y 193
-x 316 y 190
-przef x 316 przef y 191
-x 316 y 190
-przef x 316 przef y 191
-x 416 y 192
-przef x 417 przef y 192
-x 418 y 194
-przef x 418 przef y 191
-x 418 y 196
-przef x 419 przef y 192
-x 342 y 266
-przef x 322 przef y 207
-x 342 y 272
-przef x 402 przef y 209
-x 308 y 194
-przef x 319 przef y 206
-x 320 y 192
-przef x 320 przef y 203
-x 418 y 196
-przef x 405 przef y 207
-x 418 y 198
-przef x 407 przef y 206
-x 418 y 200
-przef x 409 przef y 205
-x 320 y 196
-przef x 320 przef y 202
-x 318 y 196
-przef x 320 przef y 201
-x 418 y 200
-przef x 411 przef y 204
-x 418 y 202
-przef x 413 przef y 204
-x 320 y 200
-przef x 320 przef y 201
-x 418 y 204
-przef x 414 przef y 204
-x 320 y 200
-przef x 320 przef y 201
-x 418 y 204
-przef x 415 przef y 204
-x 320 y 200
-przef x 320 przef y 201
-x 418 y 204
-przef x 416 przef y 204
-x 418 y 202
-przef x 417 przef y 204
-x 320 y 198
-przef x 320 przef y 201
-x 418 y 202
-przef x 418 przef y 203
-x 316 y 196
-przef x 319 przef y 200
-x 416 y 200
-przef x 418 przef y 202
-x 414 y 200
-przef x 417 przef y 202
-x 316 y 196
-przef x 319 przef y 199
-x 416 y 200
-przef x 417 przef y 201
-x 408 y 192
-przef x 415 przef y 199
-x 310 y 190
-przef x 317 przef y 197
-x 318 y 192
-przef x 317 przef y 195
-x 418 y 196
-przef x 416 przef y 198
-x 320 y 194
-przef x 317 przef y 194
-x 418 y 198
-przef x 416 przef y 197
-x 418 y 200
-przef x 417 przef y 197
-x 418 y 200
-przef x 417 przef y 198
-x 320 y 196
-przef x 318 przef y 194
-x 418 y 202
-przef x 417 przef y 198
-x 320 y 196
-przef x 318 przef y 194
-x 418 y 202
-przef x 418 przef y 199
-x 314 y 198
-przef x 317 przef y 195
-x 412 y 202
-przef x 416 przef y 199
-x 312 y 200
-przef x 316 przef y 195
-x 312 y 200
-przef x 314 przef y 196
-x 312 y 198
-przef x 314 przef y 197
-x 312 y 196
-przef x 313 przef y 196
-x 312 y 196
-przef x 312 przef y 196
-x 312 y 194
-przef x 312 przef y 195
-x 312 y 194
-przef x 311 przef y 195
-x 312 y 194
-przef x 311 przef y 194
-x 312 y 192
-przef x 311 przef y 194
-x 410 y 194
-przef x 415 przef y 198
-x 312 y 192
-przef x 310 przef y 193
-x 310 y 192
-przef x 310 przef y 192
-x 312 y 192
-przef x 310 przef y 192
-x 310 y 196
-przef x 310 przef y 192
-x 312 y 198
-przef x 310 przef y 193
-x 310 y 202
-przef x 309 przef y 195
-x 312 y 202
-przef x 310 przef y 197
-x 412 y 200
-przef x 414 przef y 198
-x 314 y 198
-przef x 310 przef y 197
-x 314 y 196
-przef x 311 przef y 197
-x 414 y 198
-przef x 414 przef y 198
-x 316 y 194
-przef x 312 przef y 196
-x 414 y 196
-przef x 414 przef y 197
-x 316 y 192
-przef x 313 przef y 195
-x 316 y 190
-przef x 314 przef y 194
-x 414 y 194
-przef x 413 przef y 196
-x 416 y 192
-przef x 414 przef y 195
-x 316 y 190
-przef x 314 przef y 193
-x 416 y 192
-przef x 414 przef y 194
-x 316 y 188
-przef x 315 przef y 191
-x 414 y 192
-przef x 414 przef y 193
-x 314 y 188
-przef x 315 przef y 190
-x 414 y 194
-przef x 414 przef y 193
-x 314 y 192
-przef x 315 przef y 190
-x 314 y 194
-przef x 315 przef y 191
-x 414 y 196
-przef x 414 przef y 193
-x 314 y 192
-przef x 315 przef y 190
-x 414 y 198
-przef x 413 przef y 193
-x 316 y 194
-przef x 315 przef y 191
-x 414 y 198
-przef x 413 przef y 194
-x 314 y 196
-przef x 315 przef y 192
-x 412 y 200
-przef x 413 przef y 195
-x 412 y 200
-przef x 412 przef y 196
-x 314 y 196
-przef x 315 przef y 193
-x 414 y 200
-przef x 413 przef y 197
-x 314 y 196
-przef x 314 przef y 193
-x 412 y 202
-przef x 412 przef y 198
-x 314 y 198
-przef x 314 przef y 194
-x 412 y 202
-przef x 412 przef y 199
-x 314 y 200
-przef x 314 przef y 196
-x 320 y 198
-przef x 315 przef y 196
-x 418 y 202
-przef x 413 przef y 200
-x 322 y 192
-przef x 317 przef y 196
-x 308 y 204
-przef x 315 przef y 197
-x 418 y 202
-przef x 414 przef y 201
-x 320 y 198
-przef x 316 przef y 198
-x 320 y 198
-przef x 317 przef y 198
-x 418 y 202
-przef x 415 przef y 201
-x 418 y 204
-przef x 416 przef y 202
-x 320 y 198
-przef x 318 przef y 198
-x 420 y 202
-przef x 417 przef y 202
-x 320 y 196
-przef x 318 przef y 198
-x 418 y 200
-przef x 417 przef y 202
-x 320 y 194
-przef x 319 przef y 197
-x 418 y 198
-przef x 418 przef y 201
-x 320 y 194
-przef x 319 przef y 197
-x 418 y 198
-przef x 418 przef y 201
-x 320 y 192
-przef x 320 przef y 195
-x 418 y 196
-przef x 418 przef y 200
-x 418 y 196
-przef x 418 przef y 199
-x 420 y 194
-przef x 419 przef y 197
-x 320 y 190
-przef x 320 przef y 194
-x 420 y 194
-przef x 419 przef y 196
-x 420 y 194
-przef x 420 przef y 195
-x 418 y 194
-przef x 419 przef y 195
-x 320 y 194
-przef x 320 przef y 194
-x 320 y 192
-przef x 320 przef y 193
-x 320 y 194
-przef x 320 przef y 193
-x 320 y 194
-przef x 320 przef y 193
-x 420 y 198
-przef x 420 przef y 195
-x 420 y 198
-przef x 420 przef y 195
-x 320 y 196
-przef x 320 przef y 193
-x 418 y 200
-przef x 420 przef y 196
-x 418 y 200
-przef x 419 przef y 197
-x 320 y 196
-przef x 320 przef y 194
-x 418 y 198
-przef x 419 przef y 197
-x 320 y 196
-przef x 320 przef y 194
-x 420 y 196
-przef x 419 przef y 196
-x 322 y 194
-przef x 321 przef y 194
-x 322 y 188
-przef x 321 przef y 192
-x 420 y 192
-przef x 419 przef y 195
-x 322 y 188
-przef x 321 przef y 191
-x 420 y 192
-przef x 419 przef y 194
-x 420 y 190
-przef x 420 przef y 193
-x 322 y 188
-przef x 322 przef y 190
-x 420 y 190
-przef x 420 przef y 192
-x 320 y 186
-przef x 321 przef y 189
-x 322 y 186
-przef x 321 przef y 187
-x 420 y 190
-przef x 420 przef y 191
-x 324 y 188
-przef x 322 przef y 187
-x 422 y 194
-przef x 420 przef y 191
-x 420 y 194
-przef x 420 przef y 191
-x 324 y 194
-przef x 323 przef y 188
-x 322 y 192
-przef x 322 przef y 188
-x 422 y 196
-przef x 421 przef y 192
-x 422 y 198
-przef x 421 przef y 193
-x 420 y 202
-przef x 421 przef y 195
-x 420 y 198
-przef x 421 przef y 195
-x 320 y 196
-przef x 322 przef y 190
-x 322 y 194
-przef x 322 przef y 191
-x 322 y 192
-przef x 322 przef y 191
-x 320 y 192
-przef x 321 przef y 191
-x 312 y 192
-przef x 319 przef y 191
-x 312 y 190
-przef x 317 przef y 191
-x 310 y 188
-przef x 315 przef y 190
-x 312 y 186
-przef x 314 przef y 189
-x 410 y 194
-przef x 418 przef y 195
-x 312 y 190
-przef x 313 przef y 189
-x 418 y 194
-przef x 418 przef y 195
-x 320 y 192
-przef x 314 przef y 189
-x 420 y 196
-przef x 418 przef y 195
-x 420 y 200
-przef x 418 przef y 196
-x 418 y 200
-przef x 418 przef y 197
-x 320 y 198
-przef x 314 przef y 191
-x 418 y 200
-przef x 418 przef y 198
-x 342 y 268
-przef x 401 przef y 214
-x 418 y 198
-przef x 403 przef y 212
-x 418 y 198
-przef x 405 przef y 210
-x 320 y 194
-przef x 315 przef y 192
-x 420 y 194
-przef x 407 przef y 207
-x 420 y 194
-przef x 409 przef y 205
-x 420 y 194
-przef x 411 przef y 203
-x 322 y 188
-przef x 316 przef y 191
-x 420 y 192
-przef x 413 przef y 200
-x 320 y 186
-przef x 317 przef y 190
-x 420 y 190
-przef x 414 przef y 198
-x 420 y 192
-przef x 416 przef y 196
-x 420 y 190
-przef x 417 przef y 194
-x 322 y 186
-przef x 318 przef y 189
-x 322 y 186
-przef x 319 przef y 188
-x 418 y 194
-przef x 417 przef y 193
-x 416 y 194
-przef x 417 przef y 193
-x 318 y 192
-przef x 319 przef y 188
-x 318 y 194
-przef x 319 przef y 189
-x 414 y 200
-przef x 417 przef y 194
-x 316 y 198
-przef x 318 przef y 191
-x 414 y 202
-przef x 416 przef y 195
-x 316 y 198
-przef x 318 przef y 193
-x 414 y 202
-przef x 416 przef y 196
-x 314 y 194
-przef x 317 przef y 193
-x 412 y 196
-przef x 415 przef y 196
-x 312 y 192
-przef x 315 przef y 193
-x 412 y 194
-przef x 414 przef y 195
-x 314 y 192
-przef x 315 przef y 193
-x 412 y 194
-przef x 414 przef y 195
-x 314 y 192
-przef x 314 przef y 193
-x 412 y 194
-przef x 413 przef y 194
-x 312 y 190
-przef x 313 przef y 192
-x 412 y 192
-przef x 412 przef y 193
-x 314 y 190
-przef x 313 przef y 192
-x 412 y 192
-przef x 412 przef y 193
-x 312 y 188
-przef x 312 przef y 191
-x 414 y 190
-przef x 412 przef y 192
-x 314 y 188
-przef x 312 przef y 190
-x 344 y 258
-przef x 397 przef y 206
-x 314 y 192
-przef x 312 przef y 190
-x 420 y 202
-przef x 400 przef y 206
-x 326 y 198
-przef x 315 przef y 192
-x 428 y 206
-przef x 405 przef y 207
-x 438 y 190
-przef x 412 przef y 204
-x 486 y 194
-przef x 429 przef y 202
-x 454 y 194
-przef x 436 przef y 200
+x 14 y 43
+przef x 9 przef y 28
+x 4 y 132
+przef x 2 przef y 88
+x 14 y 43
+przef x 14 przef y 43
+x 54 y 96
+przef x 40 przef y 81
+x 3 y 138
+przef x 3 przef y 136
+x 54 y 96
+przef x 54 przef y 100
+x 15 y 42
+przef x 11 przef y 94
+x 52 y 94
+przef x 59 przef y 108
+x 52 y 94
+przef x 62 przef y 111
+x 14 y 41
+przef x 14 przef y 69
+x 265 y 204
+przef x 151 przef y 158
+x 265 y 204
+przef x 210 przef y 189
+x 54 y 93
+przef x 176 przef y 170
+x 14 y 40
+przef x 15 przef y 53
+x 54 y 93
+przef x 150 przef y 156
+x 14 y 43
+przef x 16 przef y 46
+x 53 y 94
+przef x 130 przef y 145
+x 53 y 94
+przef x 114 przef y 136
+x 14 y 42
+przef x 17 przef y 41
+x 54 y 95
+przef x 101 przef y 129
+x 54 y 95
+przef x 91 przef y 123
+x 14 y 43
+przef x 17 przef y 38
+x 51 y 93
+przef x 82 przef y 118
+x 51 y 93
+przef x 74 przef y 113
+x 14 y 42
+przef x 17 przef y 36
+x 53 y 95
+przef x 68 przef y 109
+x 53 y 95
+przef x 63 przef y 106
+x 14 y 40
+przef x 50 przef y 91
+x 1 y 136
+przef x 12 przef y 66
+x 14 y 40
+przef x 39 przef y 78
+x 13 y 42
+przef x 13 przef y 59
+x 424 y 223
+przef x 124 przef y 108
+x 424 y 223
+przef x 197 przef y 135
+x 55 y 96
+przef x 176 przef y 129
+x 14 y 43
+przef x 13 przef y 54
+x 55 y 96
+przef x 157 przef y 124
+x 14 y 41
+przef x 14 przef y 50
+x 54 y 94
+przef x 139 przef y 118
+x 54 y 94
+przef x 123 przef y 114
+x 15 y 43
+przef x 14 przef y 47
+x 428 y 228
+przef x 192 przef y 139
+x 428 y 228
+przef x 252 przef y 162
+x 14 y 40
+przef x 15 przef y 44
+x 428 y 230
+przef x 304 przef y 181
+x 428 y 230
+przef x 348 przef y 198
+x 14 y 41
+przef x 15 przef y 42
+x 52 y 94
+przef x 299 przef y 181
+x 52 y 94
+przef x 255 przef y 166
+x 15 y 40
+przef x 15 przef y 40
+x 54 y 94
+przef x 215 przef y 152
+x 54 y 94
+przef x 180 przef y 139
+x 14 y 41
+przef x 15 przef y 39
+x 53 y 94
+przef x 149 przef y 128
+x 53 y 94
+przef x 122 przef y 119
+x 13 y 39
+przef x 90 przef y 99
+x 1 y 138
+przef x 12 przef y 60
+x 13 y 39
+przef x 64 przef y 81
+x 13 y 40
+przef x 12 przef y 56
+x 105 y 25
+przef x 62 przef y 63
+x 105 y 25
+przef x 62 przef y 48
+x 14 y 41
+przef x 12 przef y 53
+x 430 y 230
+przef x 136 przef y 82
+x 430 y 230
+przef x 202 przef y 112
+x 52 y 93
+przef x 174 przef y 108
+x 14 y 41
+przef x 13 przef y 50
+x 52 y 93
+przef x 149 przef y 105
+x 15 y 42
+przef x 13 przef y 48
+x 55 y 93
+przef x 128 przef y 102
+x 55 y 93
+przef x 110 przef y 99
+x 13 y 41
+przef x 13 przef y 46
+x 52 y 92
+przef x 93 przef y 96
+x 52 y 92
+przef x 79 przef y 94
+x 15 y 41
+przef x 13 przef y 44
+x 54 y 94
+przef x 68 przef y 93
+x 54 y 94
+przef x 59 przef y 92
+x 52 y 93
+przef x 51 przef y 91
+x 14 y 41
+przef x 14 przef y 43
+x 52 y 93
+przef x 45 przef y 91
+x 11 y 40
+przef x 13 przef y 41
+x 104 y 25
+przef x 52 przef y 75
+x 104 y 25
+przef x 59 przef y 61
+x 15 y 42
+przef x 13 przef y 41
+x 104 y 25
+przef x 66 przef y 50
+x 104 y 25
+przef x 72 przef y 40
+x 14 y 41
+przef x 58 przef y 36
+x 1 y 137
+przef x 10 przef y 61
+x 14 y 41
+przef x 45 przef y 32
+x 15 y 41
+przef x 11 przef y 58
+x 52 y 92
+przef x 43 przef y 42
+x 52 y 92
+przef x 42 przef y 50
+x 14 y 41
+przef x 12 przef y 55
+x 53 y 94
+przef x 41 przef y 58
+x 53 y 94
+przef x 41 przef y 66
+x 15 y 41
+przef x 12 przef y 52
+x 53 y 94
+przef x 42 przef y 72
+x 53 y 94
+przef x 42 przef y 78
+x 14 y 42
+przef x 12 przef y 50
+x 53 y 94
+przef x 43 przef y 82
+x 53 y 94
+przef x 43 przef y 86
+x 14 y 41
+przef x 13 przef y 48
+x 104 y 24
+przef x 56 przef y 74
+x 104 y 24
+przef x 67 przef y 63
+x 14 y 41
+przef x 13 przef y 46
+x 54 y 93
+przef x 65 przef y 69
+x 54 y 93
+przef x 63 przef y 74
+x 15 y 42
+przef x 13 przef y 44
+x 432 y 232
+przef x 146 przef y 110
+x 432 y 232
+przef x 219 przef y 141
+x 15 y 41
+przef x 14 przef y 43
+x 53 y 94
+przef x 196 przef y 137
+x 53 y 94
+przef x 174 przef y 132
+x 14 y 41
+przef x 14 przef y 42
+x 55 y 95
+przef x 155 przef y 128
+x 55 y 95
+przef x 136 przef y 123
+x 54 y 94
+przef x 120 przef y 119
+x 14 y 41
+przef x 14 przef y 41
+x 54 y 94
+przef x 105 przef y 115
+x 15 y 41
+przef x 14 przef y 40
+x 72 y 126
+przef x 96 przef y 118
+x 72 y 126
+przef x 89 przef y 121
+x 14 y 42
+przef x 14 przef y 40
+x 102 y 26
+przef x 89 przef y 101
+x 102 y 26
+przef x 90 przef y 83
+x 53 y 93
+przef x 80 przef y 83
+x 14 y 39
+przef x 14 przef y 39
+x 53 y 93
+przef x 71 przef y 83
+x 14 y 41
+przef x 14 przef y 39
+x 54 y 94
+przef x 64 przef y 84
+x 54 y 94
+przef x 58 przef y 84
+x 14 y 40
+przef x 14 przef y 38
+x 53 y 94
+przef x 54 przef y 85
+x 53 y 94
+przef x 50 przef y 86
+x 14 y 41
+przef x 14 przef y 38
+x 106 y 26
+przef x 59 przef y 71
+x 106 y 26
+przef x 67 przef y 59
+x 14 y 41
+przef x 14 przef y 38
+x 105 y 27
+przef x 74 przef y 49
+x 105 y 27
+przef x 81 przef y 40
+x 13 y 41
+przef x 14 przef y 38
+x 53 y 94
+przef x 75 przef y 48
+x 53 y 94
+przef x 70 przef y 55
+x 14 y 40
+przef x 14 przef y 38
+x 53 y 94
+przef x 65 przef y 62
+x 53 y 94
+przef x 61 przef y 68
+x 14 y 41
+przef x 14 przef y 39
+x 54 y 93
+przef x 58 przef y 74
+x 54 y 93
+przef x 56 przef y 78
+x 14 y 42
+przef x 14 przef y 39
+x 50 y 91
+przef x 53 przef y 82
+x 50 y 91
+przef x 51 przef y 85
+x 14 y 41
+przef x 14 przef y 39
+x 317 y 228
+przef x 109 przef y 118
+x 317 y 228
+przef x 159 przef y 147
+x 15 y 41
+przef x 14 przef y 39
+x 53 y 94
+przef x 144 przef y 141
+x 53 y 94
+przef x 129 przef y 136
+x 14 y 41
+przef x 107 przef y 118
+x 2 y 128
+przef x 11 przef y 59
+x 14 y 41
+przef x 88 przef y 103
+x 14 y 40
+przef x 11 przef y 56
+x 54 y 95
+przef x 79 przef y 101
+x 54 y 95
+przef x 72 przef y 99
+x 432 y 234
+przef x 150 przef y 129
+x 309 y 232
+przef x 78 przef y 97
+x 432 y 234
+przef x 219 przef y 155
+x 14 y 41
+przef x 70 przef y 89
+x 53 y 93
+przef x 194 przef y 146
+x 53 y 93
+przef x 170 przef y 137
