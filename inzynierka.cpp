@@ -7,14 +7,15 @@
 #include <unistd.h>
 #include<fstream>
 #include <mutex>
+#include <cmath>
 using namespace std;
 using namespace cv;
 
 //zmienne globalne
-Mutex blokada;
+Mutex blokada, blokada1;
 int pom;
-Point oko_lewe=Point(0,0);
-Point oko_prawe=Point(0,0); 
+vector <Rect>  oko_lewe, oko_leweR;
+vector <Rect>  oko_prawe, oko_praweR;
 Point srodek, srodekl;
 Point  przefiltrowane_x;
 Point przefiltrowane_l;
@@ -45,7 +46,8 @@ CascadeClassifier cascade;
 CascadeClassifier kaskada_oczu;
 bool mrugniecie();
 Point wyliczenie_sredniej (char a);
-
+bool RightEyeDetected, LeftEyeDetected;
+int SrodekPrawyX=0, SrodekPrawyY=0,SrodekLewyX=0, SrodekLewyY=0;
 //Pierwszy wątek znajdujący źrenice i zapisujący jej położenie
 void f1()
 {    
@@ -98,7 +100,7 @@ void f1()
     // Filtr Kalmana
 
     //oko prawe
-    Point  punkt_zlapany = Point( oko_prawe.x, oko_prawe.y);
+    /*Point  punkt_zlapany = Point( oko_prawe.x, oko_prawe.y);
     Point  punkt_przewidywany = punkt_zlapany;
     Point punkt_wlasciwy = punkt_zlapany;
     KalmanFilter filtr(4,2,0);
@@ -120,7 +122,7 @@ void f1()
     Point punkt_wlasciwy_l = punkt_zlapany_l;
     KalmanFilter filtr1(4,2,0);
     filtr1.transitionMatrix = (Mat_<float>(4,4) << 1, 0, 1, 0,  0,1,0,1, 0,0,1,0, 0,0,0,1);
-    //Inicjalizacja wktora stanu z fazy predykcji 
+    //Inicjalizacja wektora stanu z fazy predykcji 
     filtr1.statePre.at<float>(0) = oko_lewe.x;        //Położenie x 
     filtr1.statePre.at<float>(1) = oko_lewe.y;        //Położenie y 
     filtr1.statePre.at<float>(2) = 0;        //Prędkosc x 
@@ -132,7 +134,8 @@ void f1()
      Mat_<float> macierz_pozycji_l(2,1);
      
      //ofstream zapis("oko.txt");
-
+*/ int t=0;
+    bool IsThereEyes=false;
     //Pętla główna
     while(waitKey(20)!=27)
     {   
@@ -142,35 +145,164 @@ void f1()
        na_zywo=imread("nazywo.jpg",IMREAD_COLOR);
         //konwersja na szaro
         cvtColor(na_zywo, szare_zdjecie, COLOR_RGB2GRAY);
-        imshow("szare zdjęcie",szare_zdjecie);
+      //  imshow("szare zdjęcie",szare_zdjecie);
 
         //equalizeHist(szare_zdjecie, szare_zdjecie);
 
+        //znalezienie czarnego obszaru
+        cvtColor(na_zywo,hsv, COLOR_BGR2HSV);
+         //imshow("HSV", hsv);
         // Znalezienie i zaznaczenie obszaru oczu
-        cascade.detectMultiScale(szare_zdjecie, twarze, 1.1, 2, 0|CASCADE_SCALE_IMAGE, Size(0,0));
+        cascade.detectMultiScale(szare_zdjecie, twarze, 1.1, 15, 0|CASCADE_SCALE_IMAGE, Size(0,0));
+        RightEyeDetected=false;
+        LeftEyeDetected=false;
         for(size_t i=0; i<twarze.size(); i++)
         {
             kwadrat =twarze[i];
             rectangle(na_zywo,Point(kwadrat.x,kwadrat.y),Point(kwadrat.x+kwadrat.width-1,kwadrat.y+kwadrat.height-1), kolor,3,8,0);
         }
-        //Znalezienie i zaznaczenie obszaru oczu
-        kaskada_oczu.detectMultiScale(szare_zdjecie, oczy, 1.1,2,0|CASCADE_SCALE_IMAGE, Size(0,0));
-        for(size_t i=0; i<oczy.size();i++)
+        Mat FaceRight, FaceLeft;
+        if(!twarze.empty()) {
+            twarze[0].width=twarze[0].width/2;
+            FaceRight = szare_zdjecie(twarze[0]);
+            twarze[0].x=twarze[0].x+twarze[0].width;
+            FaceLeft=szare_zdjecie(twarze[0]);
+            //imshow("Prawa", FaceRight);
+           // imshow("Lewa", FaceLeft);
+            twarze[0].x-=twarze[0].width;
+            twarze[0].width=twarze[0].width*2;
+        }
+
+            //Znalezienie i zaznaczenie obszaru oczu
+       kaskada_oczu.detectMultiScale(FaceRight, oko_prawe, 1.1,20,0|CASCADE_SCALE_IMAGE, Size(0,0));
+        for(size_t i=0; i<oko_prawe.size();i++)
         {
-            
-            kwadrat =oczy[i];
+            RightEyeDetected=true;
+
+            oko_prawe[i].x+=twarze[0].x;
+            oko_prawe[i].y+=twarze[0].y;
+            kwadrat =oko_prawe[i];
             for(size_t j=0; j<twarze.size(); j++)
             {
-                if(kwadrat.x>twarze[j].x+10 && kwadrat.x<twarze[j].x+twarze[j].width-10 && kwadrat.y>twarze[j].y+10 && kwadrat.y<twarze[j].y+twarze[j].height-50)
                 rectangle(na_zywo,Point(kwadrat.x,kwadrat.y),Point(kwadrat.x+kwadrat.width-1,kwadrat.y+kwadrat.height-1), kolor1,3,8,0);
             }
         }
-        
-        //źrenice metodą znajdowania koloru
+        kaskada_oczu.detectMultiScale(FaceLeft, oko_lewe, 1.1,20,0|CASCADE_SCALE_IMAGE, Size(0,0));
+        for(size_t i=0; i<oko_lewe.size();i++)
+        {
+            LeftEyeDetected=true;
+            oko_lewe[i].x+=twarze[0].x+twarze[0].width/2;
+            oko_lewe[i].y+=twarze[0].y;
+            kwadrat =oko_lewe[i];
+            for(size_t j=0; j<twarze.size(); j++)
+            {
+                rectangle(na_zywo,Point(kwadrat.x, kwadrat.y),Point(kwadrat.x+kwadrat.width-1,kwadrat.y+kwadrat.height-1), kolor1,3,8,0);
+            }
+        }
+        if(!oko_prawe.empty())
+            oko_praweR=oko_prawe;
+        else if(oko_prawe.empty() && !oko_praweR.empty())
+            oko_prawe=oko_praweR;
+        if(!oko_lewe.empty())
+            oko_leweR=oko_lewe;
+        else if(oko_lewe.empty() && !oko_leweR.empty())
+            oko_lewe=oko_leweR;
 
-        //znalezienie czarnego obszaru
-        cvtColor(na_zywo,hsv, COLOR_BGR2HSV);
-         imshow("HSV", hsv);
+        Mat EdgesKernel = (Mat_ <double>(3,3)<<0, 1, 0, 1, -4, 1, 0, 1, 0);
+       // Mat EdgesKernel = (Mat_ <double>(3,3)<<1, 1, 1, 1, -8, 1, 1, 1, 1);
+
+        vector <Mat>  EdgesResults;
+        vector <Mat> CutGray;
+        if(!oko_lewe.empty() &&!IsThereEyes && !oko_prawe.empty())
+            IsThereEyes=true;
+        if(IsThereEyes)
+        {
+            CutGray.resize(2);
+            EdgesResults.resize(2);
+            oko_prawe[0].y+=oko_prawe[0].height/4;
+            oko_prawe[0].height=oko_prawe[0].height/2;
+            CutGray[0]=szare_zdjecie(oko_prawe[0]);
+           // imshow("1", CutGray[0]);
+            oko_lewe[0].y+=oko_lewe[0].height/4;
+            oko_lewe[0].height=oko_lewe[0].height/2;
+            CutGray[1]=szare_zdjecie(oko_lewe[0]);
+            Mat kernel1 =getStructuringElement(MORPH_CROSS , Size(3,3));
+           // imshow("2", CutGray[1]);
+        filter2D(CutGray[0], EdgesResults[0], -1, EdgesKernel);
+            dilate(EdgesResults[0],EdgesResults[0], kernel1);
+            erode(EdgesResults[0], EdgesResults[0],kernel1);
+           // Canny( EdgesResults[0], EdgesResults[0], 60, 70, 7);
+           filter2D(CutGray[1], EdgesResults[1], -1, EdgesKernel);
+
+        //threshold(EdgesResults, EdgesResults, 10, 0, THRESH_TOZERO  );
+           // GaussianBlur(EdgesResults[0], EdgesResults[0], Size(5,5),0,0,BORDER_REFLECT);
+          //  GaussianBlur(EdgesResults[1], EdgesResults[1], Size(5,5),0,0,BORDER_REFLECT);
+          //  equalizeHist(EdgesResults[0], EdgesResults[0]);
+           //threshold(EdgesResults[0], EdgesResults[0], 200, 0, THRESH_TOZERO  );
+
+            //znajdowanie okregow
+
+           // Canny(EdgesResults,kontury, 60,70);
+            //medianBlur(EdgesResults, EdgesResults, 3);
+            //medianBlur(EdgesResults, EdgesResults, 3);
+            int ilosc=0;
+        for(int i=0; i<EdgesResults[0].cols; i++)
+            for(int j=0; j<EdgesResults[0].rows; j++)
+        if(EdgesResults[0].at<int>(i,j)>0)
+        {
+            blokada.lock();
+            ilosc++;
+            SrodekPrawyX+=i;
+            SrodekPrawyY+=j;
+
+        }
+            SrodekPrawyY=SrodekPrawyY/ilosc;
+            SrodekPrawyX=SrodekPrawyX/ilosc;
+ilosc=0;
+            circle(na_zywo, Point(SrodekPrawyX+oko_prawe[0].x, SrodekPrawyY+oko_prawe[0].y),2, Scalar(0,0,255), 2);
+
+            for(int i=0; i<EdgesResults[1].cols; i++)
+                for(int j=0; j<EdgesResults[1].rows; j++)
+                    if(EdgesResults[1].at<int>(i,j)>0)
+                    {
+                        ilosc++;
+                        SrodekLewyX+=i;
+                        SrodekLewyY+=j;
+
+                    }
+            SrodekLewyX=SrodekLewyX/ilosc;
+            SrodekLewyY=SrodekLewyY/ilosc;
+            int dix=0, diy=0, dlugoscD=0;
+            int xi=0, yi=0;
+            int gix=0, giy=0;
+           /* for(int i=0; i<EdgesResults[1].cols; i++)
+                for(int j=0; j<EdgesResults[1].rows; j++)
+                {
+                    dix=xi-SrodekLewyX;
+                    diy=yi-SrodekLewyY;
+                    dlugoscD=sqrt(diy*diy+dix*dix);
+                    diy=diy/dlugoscD;
+                    dix=dix/dlugoscD;
+
+                }*/
+         //   SrodekLewyY=max();/
+            blokada.unlock();
+            circle(na_zywo, Point(SrodekLewyX+oko_lewe[0].x, SrodekLewyY+oko_lewe[0].y),2, Scalar(0,0,255), 2);
+                    //imshow ("KONTUR", kontury);
+
+if(t==30){
+
+    cout<<endl<<endl<<SrodekPrawyX<<"      "<< SrodekPrawyY<<endl<<SrodekPrawyX+oko_prawe[0].x<<"            "<< SrodekPrawyY+oko_prawe[0].y<<endl<<endl;
+
+    //cout<<EdgesResults[0]<< "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"<<endl;
+    t=0;
+}
+t++;
+            imshow("wynik", EdgesResults[0]);
+            imshow("wynik2", EdgesResults[1]);
+        }
+        //źrenice metodą znajdowania ko8loru
+/*
         Scalar lower(hmin, smin, vmin);
         Scalar upper (hmax, smax, vmax);
         inRange(hsv, lower, upper, mask);
@@ -186,6 +318,7 @@ void f1()
             dilate(erozja, dylatacja, kernel) ;
         }
         dilate(dylatacja, dylatacja, kernel1);
+        //erode(dylatacja, dylatacja, kernel1);
         imshow("dylatacja", dylatacja);
 
         // wyciecie obszaru oczu  z obrazu binarnego
@@ -195,7 +328,7 @@ void f1()
             binarny.resize(oczy.size());
             binarny[i]=dylatacja(oczy[i]);
             char a=i;
-            imshow("a", binarny[i]);
+            imshow("a", binarny[0]);
         }
 
         vector <Point> punkty;
@@ -296,7 +429,7 @@ void f1()
         }
 */
        // Zaznaczenie krawędzi Cannym 
-        GaussianBlur(mask,Blur, Size(5,5),3,0);
+       /* GaussianBlur(mask,Blur, Size(5,5),3,0);
         Canny(Blur,kontury,25,70);
         Mat kernel2=getStructuringElement(MORPH_RECT, Size(3,3));
         dilate(kontury, kontury,kernel2);
@@ -318,7 +451,7 @@ void f1()
         Point &srodek_oka_prawego=oko_prawe; 
         przefiltrowane_x=Point(0,0);
         przefiltrowane_l=Point(0,0);
-        for(size_t i=0; i<circles.size(); i++) 
+        /*for(size_t i=0; i<circles.size(); i++) 
         {
             Point center(cvRound(circles[i][0]), cvRound(circles[i][1]));
             for( int j=0; j<oczy.size(); j++)
@@ -376,8 +509,8 @@ void f1()
                 }
             }  
             
-        }
-        imshow("CZy", src);
+        }*/
+        //imshow("CZy", src);
 
         /*
       //  znajdowanie konturów za pomocą find contours
@@ -472,12 +605,12 @@ void f1()
             
         }*/
         //Filtr Kalmana przewidywanie i poprawa
-        //  macierz_pozycji(0) = oko_prawe.x;
-        // macierz_pozycji(1) = oko_prawe.y;
-        // filtr.predict();
-        // Mat przewidziane= filtr.correct(macierz_pozycji);
-        // Point przewidziany_punkt (przewidziane.at<float>(0), przewidziane.at<float>(1));
-        // przefiltrowane_x=przewidziany_punkt;
+        /* macierz_pozycji(0) = oko_prawe.x;
+        macierz_pozycji(1) = oko_prawe.y;
+        filtr.predict();
+        Mat przewidziane= filtr.correct(macierz_pozycji);
+        Point przewidziany_punkt (przewidziane.at<float>(0), przewidziane.at<float>(1));
+        przefiltrowane_x=przewidziany_punkt;
         // zapis<<"x "<<srodek_oka_prawego.x<<" ";
         // zapis<<"y "<<srodek_oka_prawego.y<<endl;
         // zapis<<"przef x "<<przefiltrowane_x.x<<" ";
@@ -485,9 +618,10 @@ void f1()
        // cout<<endl;
         if (na_zywo.empty())
             cout<<"k";
-        
+        */
+        blokada1.lock();
         imshow("live",na_zywo);
-
+        blokada1.unlock();
     }
     //zapis.close();
 }
@@ -497,10 +631,10 @@ bool mrugniecie(Point p, Point l)
 {
      //cout<<p.x<<"  "<<p.y<<"|  " <<l.x<<"      "<<l.y<<endl;
 
-    if(p.x==0 && p.y==0 &&l.x==0 && l.y==0)
+    if(!RightEyeDetected && !LeftEyeDetected)
     {
 
-        if(t>3)
+        if(t>30)
         {
             t=0;
             return true;
@@ -515,13 +649,15 @@ bool mrugniecie(Point p, Point l)
         return false;
     }
 }
+
 //Drugi wątek do konfiguracji i wyświetlenia okna ze śledzonym wzrokiem
 void f2()
 {
     Point kopia, kopial;
     Display* d=XOpenDisplay(NULL);
     Screen* s= DefaultScreenOfDisplay(d);
-
+    ruch_poziomy.resize(2);
+    ruch_pionowy.resize(2);
     ruch_poziomy[0]=0;
     ruch_pionowy[0]=0;
     ruch_poziomy[1]=0;
@@ -540,16 +676,16 @@ void f2()
     namedWindow ("Konfiguracja", WINDOW_NORMAL);
     setWindowProperty("Konfiguracja", WND_PROP_FULLSCREEN, WINDOW_FULLSCREEN);
     //Wyświetlenie okna konfiguracji i zebranie punktów pomiarowych
-    while(punkty[4].x==0)
-    {   
+    while(punkty[4].x==0 || waitKey(20)!=27)
+    {
         blokada.lock();
-        kopia.x=przefiltrowane_x.x;
-        kopia.y=przefiltrowane_x.y;
-        kopial.x=przefiltrowane_l.x;
-        kopial.y=przefiltrowane_l.y;
+        kopia.x=SrodekPrawyX;
+        kopia.y=SrodekPrawyY;
+        kopial.x=SrodekLewyX;
+        kopial.y=SrodekLewyY;
         blokada.unlock();
         if(kopia.x!=0 && kopia.y!=0 && kopial.x!=0 && kopial.y!=0)
-        { 
+        {
                 if(poprzedni!=Point(0,0))
                 {
                         poprzedni=tymczasowy;
@@ -576,10 +712,10 @@ void f2()
                 punktyl[4].x=tymczasowyl.x;
                 punktyl[4].y=tymczasowyl.y;
                 circle(konfiguracja, Point(s->width/2,s->height/2), 50, Scalar(0,0,0), FILLED);
-                
+                sleep(3);
             }
         }
-        if(punkty[2].x!=0 && punkty[3].x==0)
+         if(punkty[2].x!=0 && punkty[3].x==0)
         {
             circle(konfiguracja, Point(50,s->height-50), 50, Scalar(0,155,0), FILLED);
            
@@ -590,9 +726,10 @@ void f2()
                 punktyl[3].x=tymczasowyl.x;
                 punktyl[3].y=tymczasowyl.y;
                 circle(konfiguracja, Point(50,s->height-50), 50, Scalar(0,0,0), FILLED);
+                sleep(3);
             }
         }
-        if(punkty[1].x!=0 &&punkty[2].x==0)
+      if(punkty[1].x!=0 &&punkty[2].x==0)
         {
             circle(konfiguracja, Point(s->width-50,s->height-50), 50, Scalar(0,155,0), FILLED);
            
@@ -603,10 +740,11 @@ void f2()
                 punktyl[2].x=tymczasowyl.x;
                 punktyl[2].y=tymczasowyl.y;
                 circle(konfiguracja, Point(s->width-50,s->height-50), 50, Scalar(0,0,0), FILLED);
+
                 sleep(3);
             }
         }
-        if(punkty[0].x!=0 && punkty[1].x==0)
+       else if(punkty[0].x!=0 && punkty[1].x==0)
         {
             circle(konfiguracja, Point(s->width-50,50), 50, Scalar(0,155,0), FILLED);
             if(mrugniecie(kopia, kopial))
@@ -616,12 +754,13 @@ void f2()
                 punktyl[1].x=tymczasowyl.x;
                 punktyl[1].y=tymczasowyl.y;
                 circle(konfiguracja, Point(s->width-50,50), 50, Scalar(0,0,0), FILLED);
+                sleep(3);
             }
         }
         if(punkty[0].x==0)
         {
             circle(konfiguracja, Point(50,50), 50, Scalar(250,0,125), FILLED);
-            
+
             if(mrugniecie(kopia, kopial))
             {
                 punkty[0].x=tymczasowy.x;
@@ -629,11 +768,22 @@ void f2()
                 punktyl[0].x=tymczasowyl.x;
                 punktyl[0].y=tymczasowyl.y;
                 circle(konfiguracja, Point(50,50), 50, Scalar(0,0,0), FILLED);
+                sleep(3);
             }
         }
         imshow ("Konfiguracja", konfiguracja);
     }
     destroyWindow("Konfiguracja");
+   // srodek
+    blokada1.lock();
+
+       line(na_zywo, Point(punkty[4].x, punkty[4].y-10),Point(punkty[4].x, punkty[4].y+10), Scalar(255,255,0), 1);
+       line(na_zywo, Point(punkty[4].x-10, punkty[4].y),Point(punkty[4].x+10, punkty[4].y), Scalar(255,255,0), 1);
+       line(na_zywo, punkty[0], punkty[1], Scalar(255,255,0), 1);
+       line(na_zywo, punkty[2], punkty[1], Scalar(255,255,0), 1);
+       line(na_zywo, punkty[2], punkty[3], Scalar(255,255,0), 1);
+       line(na_zywo, punkty[0], punkty[3], Scalar(255,255,0), 1);
+    blokada1.unlock();
 
 
     srodek=punkty[4];
@@ -642,11 +792,11 @@ void f2()
     namedWindow ("sledzenie", WINDOW_NORMAL);
     setWindowProperty("sledzenie", WND_PROP_FULLSCREEN, WINDOW_FULLSCREEN);
 
-    while(true)
+    while(waitKey(20)!=27)
     {
         blokada.lock();
-        kopia.x=przefiltrowane_x.x;
-        kopia.y=przefiltrowane_x.y;
+        kopia.x=SrodekPrawyX;
+        kopia.y=SrodekPrawyY;
 
         blokada.unlock();
        if(kopia.x!=0 && kopia.y!=0 )
@@ -663,13 +813,13 @@ void f2()
         ruch_pionowy[0]=ruch_pionowy[1];
         imshow("sledzenie", sledzenie);
     }
-}  
+}
 int main()
 {
     std::thread thd1(f1); 
-    thread thd2(f2); 
+   // thread thd2(f2);
     thd1.join();
-    thd2.join();
+   // thd2.join();
     return 0;
 }
 // zrobic stopien wychylenia gdzzie początek układu współrzędnych byłby w lewym górnym rogu
